@@ -1,14 +1,38 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/share/share",
+    "pages/my/my"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "莞工点评",
+    "navigationBarBackgroundColor": "#c1e3f3",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "custom": true,
+    "list":[{
+      "pagePath": "pages/index/index",
+      "text":"首页"
+    },{
+      "pagePath": "pages/share/share",
+      "text":"广场"
+    },{
+      "pagePath": "pages/my/my",
+      "text":"我的"
+    }
+    
+  ],"backgroundColor": "f6f6f6",
+  "borderStyle": "white",
+  "color": "#353536",
+  "selectedColor": "#76b510"
+
+
+
+  },
+  "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "lazyCodeLoading": "requiredComponents"
 }

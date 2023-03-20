@@ -1,0 +1,264 @@
+.main{
+  width: 100vw;
+ 
+  background-color:rgba(255,255,255,1);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+}
+.header-bg{
+  width: 1300px;
+  height: 350rpx;
+  background: linear-gradient(180deg, rgba(194, 227, 243, 1) 0%, rgba(106, 163, 193, 1) 100%);
+  box-shadow: 4px 6px 23px 0px rgba(169, 169, 169, 0.07);
+  border-bottom-left-radius: 50% 170rpx;
+  border-bottom-right-radius: 50% 170rpx;
+  display: flex;
+}
+.logo-text{
+   flex: 3;
+   height: 46px;
+   display: flex;
+   justify-content: center;
+}
+.logo{
+  width: 41px;
+  height: 100%;
+}
+.search{
+  flex:7;
+  height: 46px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 以下是搜索框的样式 */
+.searchbar {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  z-index: 3;
+  height: 36px;
+  background: white;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  width: 90%;
+}
+
+.searchbar:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223,225,229,0);
+}
+
+.searchbar-wrapper {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 14px;
+}
+
+.searchbar-left {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #202124;
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  margin-top: -5px;
+}
+
+.search-icon-wrapper {
+  margin: auto;
+}
+
+.search-icon {
+  margin-top: 3px;
+  color: #9aa0a6;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+}
+
+.searchbar-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.searchbar-center {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+
+}
+
+.searchbar-input-spacer {
+  color: transparent;
+  flex: 100%;
+  white-space: pre;
+  height: 34px;
+  font-size: 16px;
+}
+
+.searchbar-input {
+  background-color: transparent;
+  border: none;
+  color: rgba(0, 0, 0, .87);
+  word-wrap: break-word;
+  outline: none;
+  display: flex;
+  flex: 100%;
+  margin-top: -37px;
+  height: 34px;
+  font-size: 16px;
+  max-width: 100%;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.24px;
+  line-height: 0px;
+  color: rgba(214, 214, 214, 1);
+  text-align: left;
+  vertical-align: top;
+}
+
+
+
+
+
+
+
+
+.bar{
+width: 90%;
+height: 260rpx;
+border-top-left-radius: 10px ;
+border-top-right-radius: 40px;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 40px;
+background: rgba(255, 255, 255, 1);
+box-shadow: 2px 11px 32px 0px rgba(0, 0, 0, 0.3);
+position: absolute;
+top: 130px;
+transform: translateY(-50%);
+display: flex;
+flex-wrap: nowrap;
+
+
+}
+.bar-item-icon{
+  width:55px;
+  height: 55px;
+}
+.bar-item{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bar-item-text{
+  font-size: 10px;
+font-weight: 500;
+line-height: 0px;
+color: rgba(102, 102, 102, 1);
+text-align: center;
+vertical-align: top;
+}
+
+.body{
+  width: 100vw;
+  margin-top: 60rpx;
+  margin-bottom: 100px;
+}
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+}
+
+.list{
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 15px;
+}
+.card-left{
+  flex:3
+}
+.card-right{
+  flex:7
+}
+.hangjz{
+  display: flex;
+  justify-content: space-between;
+}
+.card-title{
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 1);
+}
+.card-distance{
+width: 50%;
+height: 26px;
+line-height: 26px;
+font-size: 14px;
+font-weight: 400;
+letter-spacing: 0.6px;
+color: rgba(34, 164, 93, 1);
+text-align: right;
+}
+.card-detail{
+/** 文本1 */
+margin-left: 15px;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: -0.4px;
+width: 204px;
+height: 45px;
+opacity: 0.64;
+overflow: hidden;
+color: rgba(1, 15, 7, 1);
+}
+.card-img{
+  border-radius: 8px;
+  width: 100px;
+  height: 90px;
+  
+}
+.card-star{
+  font-size: 14px;
+font-weight: 400;
+letter-spacing: -0.25px;
+line-height: 0px;
+color: rgba(1, 15, 7, 1);
+text-align: left;
+margin-left: 15px;
+opacity: 0.74;
+}
+.card-price{
+  margin-left: 10px;
+  font-size: 14px;
+font-weight: 400;
+letter-spacing: -0.25px;
+line-height: 0px;
+color: rgba(1, 15, 7, 1);
+text-align: left;
+}
