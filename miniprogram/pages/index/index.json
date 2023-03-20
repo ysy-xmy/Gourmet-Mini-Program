@@ -1,4 +1,11 @@
 {
   "usingComponents": {
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c1e3f3",
+    "navigationBarTitleText": "66",
+    "navigationBarTextStyle": "black"
   }
 }
