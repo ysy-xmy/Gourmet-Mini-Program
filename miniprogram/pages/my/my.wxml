@@ -1,0 +1,15 @@
+<view class="main">
+    <view class="body-top">
+        <image src="https://inews.gtimg.com/newsapp_bt/0/13639487765/1000" class="bg"></image>
+        <view class="user-card">
+            <view class="user-card-left">
+                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="avatar"></image>
+            </view>
+            <view class="user-card-right">
+                <view class="user-card-name">莞工小可爱一枚~</view>
+                <view class="user-card-detail">请写下你的个性签名吧，这样别人才能更好地</view>
+            </view>
+        </view>
+    </view>
+    <view class="body-bottom"></view>
+</view>
