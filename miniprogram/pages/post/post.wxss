@@ -63,9 +63,6 @@ background: rgba(245, 245, 245, 1);
   flex-wrap: wrap;
   margin-bottom: 50rpx;
 }
-
-
-
 .post-card{
   width: 88%;
   height: 216rpx;

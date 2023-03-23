@@ -37,6 +37,61 @@
             </view>
         </view>
     </view>
+    <view class="line"></view>
+    <view class="show-comment">
+       <view class="comment-total">共100条评论</view>
+       <view class="comment-item">
+         <view class="comment-item-left">
+          <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="comment-item-avatar"></image>
+         <view class="comment-item-main">
+          <view class="comment-item-name">小木🐟</view> 
+          <view class="comment-item-text">嘎嘎嘎嘎嘎</view>
+          <view class="comment-item-date">03-22 20:22</view>
+         </view>
+        </view>
+         <view class="comment-item-right">
+          <image src="https://cdn2.iconfinder.com/data/icons/help-and-support-35/32/like_thumb_up_gestures_agree_thumbs_up-1024.png"  class="agree"></image>
+          
+           
+        
+          <view  class="agree-num" > 
+           
+          999</view>
+          <!-- <button class="reply-btn">回复</button> -->
+         </view>
+
+         <view class="comment-item-bottom">
+           <text style="display: none;" class="display-tip">展开2条回复</text>
+           <view class="comment-item-left">
+          <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="comment-item-avatar"></image>
+         <view class="comment-item-main">
+          <view class="comment-item-name">小木🐟</view> 
+          <view class="comment-item-text">嘎嘎嘎嘎嘎</view>
+          <view class="comment-item-date">03-22 20:22</view>
+         </view>
+        </view>
+         <view class="comment-item-right">
+          <image src="https://cdn2.iconfinder.com/data/icons/help-and-support-35/32/like_thumb_up_gestures_agree_thumbs_up-1024.png"  class="agree"></image>
+          <view class="agree-num" >999</view>
+         </view>
+
+         <view class="comment-item-left">
+          <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="comment-item-avatar"></image>
+         <view class="comment-item-main">
+          <view class="comment-item-name">小木🐟</view> 
+          <view class="comment-item-text">嘎嘎嘎嘎嘎</view>
+          <view class="comment-item-date">03-22 20:22</view>
+         </view>
+        </view>
+         <view class="comment-item-right">
+          <image src="https://cdn2.iconfinder.com/data/icons/help-and-support-35/32/like_thumb_up_gestures_agree_thumbs_up-1024.png"  class="agree"></image>
+          <view class="agree-num" >999</view>
+         </view>
+         <text style="" class="display-tip">收起2条回复</text>
+         </view>
+       </view>
+    </view>
+
     <view class="comment">
         <view class="comment-left">
             <input placeholder="我也来说两句" class="input" />
