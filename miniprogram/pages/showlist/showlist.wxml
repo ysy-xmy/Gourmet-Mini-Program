@@ -1,9 +1,5 @@
 <view class="main">
-  <view class="header-bg">
-    <view class="logo-text">
-      <image class="logo" src="../../images/logo.png"></image>
-    </view>
-    <view class="search">
+  <view class="search">
       <view class="searchbar">
         <view class="searchbar-wrapper">
           <view class="searchbar-left">
@@ -16,30 +12,11 @@
         </view>
       </view>
     </view>
-  </view>
-  <view class="bar">
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
-    </view>
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
-    </view>
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
-    </view>
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
-    </view>
-  </view>
-  <view class="body">
     <view class="nav">
-      <text class="eat">吃喝</text>
-      <text class="play">玩乐</text>
+      <text class="eat">校内</text>
+      <text class="play">校外</text>
     </view>
+
     <view class="list">
       <view class="card">
         <view class="card-left">
@@ -55,6 +32,7 @@
           <text class="card-price">人均消费：50/人</text>
         </view>
       </view>
+    
       <view class="card">
         <view class="card-left">
           <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
@@ -97,6 +75,35 @@
           <text class="card-price">人均消费：50/人</text>
         </view>
       </view>
-    </view>
-  </view>
+      <view class="card">
+        <view class="card-left">
+          <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
+        </view>
+        <view class="card-right">
+          <view class="hangjz">
+            <text class="card-title">绵记</text>
+            <text class="card-distance">700m</text>
+          </view>
+          <view class="card-detail">每一口，都是舌尖上的美味。绵记美食，让你一试难忘。快来品味我们的独特风味，开启美食之旅吧</view>
+          <text class="card-star">星级：⭐⭐⭐</text>
+          <text class="card-price">人均消费：50/人</text>
+        </view>
+      </view>
+      <view class="card">
+        <view class="card-left">
+          <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
+        </view>
+        <view class="card-right">
+          <view class="hangjz">
+            <text class="card-title">绵记</text>
+            <text class="card-distance">700m</text>
+          </view>
+          <view class="card-detail">每一口，都是舌尖上的美味。绵记美食，让你一试难忘。快来品味我们的独特风味，开启美食之旅吧</view>
+          <text class="card-star">星级：⭐⭐⭐</text>
+          <text class="card-price">人均消费：50/人</text>
+        </view>
+      </view>
+     </view>
+
+
 </view>

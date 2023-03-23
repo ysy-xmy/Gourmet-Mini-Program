@@ -1,0 +1,167 @@
+.main{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-bottom: 100rpx;
+}
+.card{
+  width: 90%;
+  height: 350rpx;
+  margin-top: 40rpx;
+  border-radius: 10px 10px, 0px, 0px;
+background: rgba(245, 245, 245, 1);
+}
+.pic-add{
+  width: 150rpx;
+  height: 150rpx;
+  background: rgba(204, 204, 204, 1);  border-radius: 10rpx;
+  margin-left: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-edit{
+  padding-left: 10rpx;
+  padding-top: 20rpx;
+  width: 100%;
+  height: 80rpx;
+}
+.add{
+  width: 60rpx;
+  height: 60rpx;
+}
+.add-label{
+
+  width: 120rpx;
+  padding-left: 10rpx;
+  font-size: 30rpx;
+  font-weight: normal;
+  color: rgba(204, 51, 16, 1);
+  margin-top: 20rpx;
+  background: rgba(204, 204, 204, 1);
+  height: 64rpx;
+  border-radius: 50px;
+  line-height: 64rpx;
+}
+
+.list-title{
+  margin-top: 40rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 1);
+}
+.list{
+  width: 90%;
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50rpx;
+}
+
+
+
+.post-card{
+  width: 88%;
+  height: 216rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 1);
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-left: 20rpx;
+  box-shadow: 5px 6px 18px 0px rgba(0, 0, 0, 0.08);
+}
+.post-card-pic{
+width: 92px;
+height: 92px;
+border-radius: 16px;
+box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.08);
+}
+.post-card-left{
+ flex: 3;
+}
+.post-card-right{
+ flex: 7;
+ display: flex;
+ align-content: space-between;
+ flex-wrap: wrap;
+}
+.hangjz{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 62rpx;
+  flex-direction: row;
+  align-content: center;
+}
+.post-card-title{
+  height: 62rpx;
+  line-height: 62rpx;
+margin-left: 10rpx;
+margin-bottom: 25rpx;
+font-size: 32rpx;
+font-weight: bold;
+color: rgba(38, 44, 61, 1);
+overflow: hidden;
+}
+.card-star{
+  height: 62rpx;
+  width: 50%;
+  font-size: 28rpx;
+font-weight: normal;
+letter-spacing: -0.25px;
+color: rgba(1, 15, 7, 1);
+margin-left: 10rpx;
+opacity: 0.74;
+line-height: 63rpx;
+}
+.card-price{
+  line-height: 62rpx;
+  width: 50%;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: -0.25px;
+  color: rgba(1, 15, 7, 1);
+  text-align: left;
+  opacity: 0.74;
+}
+.post-card-position{
+   margin-left: 10rpx;
+    font-size: 28rpx;
+    font-weight: normal;
+    color: rgba(176, 179, 199, 1);
+}
+.card-distance{
+  height: 62rpx;
+  line-height: 62rpx;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  color: rgba(34, 164, 93, 1);
+  text-align: right;
+  margin-right: 20rpx;
+  }
+  .send{
+    width: 100%;
+    height: 100rpx;
+    position: fixed;
+    top: 100%;
+    transform: translateY(-100%);
+    background-color: #fff;
+  }
+  .btn{
+    border-radius: 24.5px;
+background: linear-gradient(138.54deg, rgba(255, 204, 51, 1) 0%, rgba(255, 157, 23, 1) 100%);
+box-shadow: 0px 2px 13px 0px rgba(255, 172, 32, 0.5);
+color: #fff;
+font-size: 40rpx;
+  }

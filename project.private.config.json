@@ -66,6 +66,27 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "postdetail",
+          "pathName": "pages/postdetail/postdetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "post",
+          "pathName": "pages/post/post",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "showlist",
+          "pathName": "pages/showlist/showlist",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

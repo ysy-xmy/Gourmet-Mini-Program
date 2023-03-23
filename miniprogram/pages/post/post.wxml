@@ -1,0 +1,83 @@
+<view class="main">
+  <view class="card">
+   <textarea class="text-edit" placeholder="记录下你的美食游玩打卡之旅吧"></textarea>
+   <view class="pic-add">
+    <image src="../../images/add.png" class="add"></image>
+     </view>
+   <view class="add-label">#标签</view>
+  </view>
+
+  <view class="list-title">最近去过</view>
+  <view class="list">
+    <view class="post-card">
+        <view class="post-card-left">
+            <image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500" class="post-card-pic"></image>
+        </view>
+        <view class="post-card-right">
+            <view class="hangjz">
+                <view class="post-card-title">绵记</view>
+                <text class="card-distance">700m</text>
+            </view>
+            <view class="post-card-position">朝阳区东四十路860号</view>
+            <view class="hangjz">
+                <view class="card-star">星级：⭐⭐⭐</view>
+                <text class="card-price">人均消费：50/人</text>
+            </view>
+        </view>
+    </view>
+    <view class="post-card">
+        <view class="post-card-left">
+            <image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500" class="post-card-pic"></image>
+        </view>
+        <view class="post-card-right">
+            <view class="hangjz">
+                <view class="post-card-title">绵记</view>
+                <text class="card-distance">700m</text>
+            </view>
+            <view class="post-card-position">朝阳区东四十路860号</view>
+            <view class="hangjz">
+                <view class="card-star">星级：⭐⭐⭐</view>
+                <text class="card-price">人均消费：50/人</text>
+            </view>
+        </view>
+    </view>
+    <view class="post-card">
+        <view class="post-card-left">
+            <image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500" class="post-card-pic"></image>
+        </view>
+        <view class="post-card-right">
+            <view class="hangjz">
+                <view class="post-card-title">绵记</view>
+                <text class="card-distance">700m</text>
+            </view>
+            <view class="post-card-position">朝阳区东四十路860号</view>
+            <view class="hangjz">
+                <view class="card-star">星级：⭐⭐⭐</view>
+                <text class="card-price">人均消费：50/人</text>
+            </view>
+        </view>
+    </view>
+    <view class="post-card">
+        <view class="post-card-left">
+            <image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500" class="post-card-pic"></image>
+        </view>
+        <view class="post-card-right">
+            <view class="hangjz">
+                <view class="post-card-title">绵记</view>
+                <text class="card-distance">700m</text>
+            </view>
+            <view class="post-card-position">朝阳区东四十路860号</view>
+            <view class="hangjz">
+                <view class="card-star">星级：⭐⭐⭐</view>
+                <text class="card-price">人均消费：50/人</text>
+            </view>
+        </view>
+    </view>
+  
+   </view>
+
+   <view class="send">
+    <button style="width: 75%;" class="btn">发布</button>
+   </view>
+
+</view>

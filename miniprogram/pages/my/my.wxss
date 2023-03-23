@@ -78,3 +78,44 @@
 .active{
   text-decoration: underline black 2px;
 }
+.tiezi-avatar{
+  width: 90rpx;
+  height: 90rpx;
+  border-top-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 10px;
+}
+.tiezi-left{
+  width: 85%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.tiezi-item{
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 90rpx;
+  margin-bottom: 60rpx;
+}
+.tiezi{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+  flex-wrap: wrap;
+  
+}
+.tiezi-text{
+  width: 80%;
+  height: 100%;
+  font-size: 38rpx;
+}
+.tiezi-time{
+  width: 20%;
+
+  font-size: 22rpx;
+  align-items: flex-end;
+  display: flex;
+}

@@ -18,5 +18,54 @@
             <view class="tabbar-item">消息</view>
             <view class="tabbar-item">收藏</view>
         </view>
+        <view class="tiezi">
+            <view bindtap="enterpostdetail" class="tiezi-item">
+                <view class="tiezi-left">
+                    <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
+                    <view class="tiezi-time">10分钟前</view>
+                </view>
+                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
+            </view>
+
+            <view bindtap="enterpostdetail" class="tiezi-item">
+                <view class="tiezi-left">
+                    <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
+                    <view class="tiezi-time">10分钟前</view>
+                </view>
+                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
+            </view>
+
+            <view bindtap="enterpostdetail" class="tiezi-item">
+                <view class="tiezi-left">
+                    <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
+                    <view class="tiezi-time">10分钟前</view>
+                </view>
+                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
+            </view>
+
+            <view bindtap="enterpostdetail" class="tiezi-item">
+                <view class="tiezi-left">
+                    <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
+                    <view class="tiezi-time">10分钟前</view>
+                </view>
+                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
+            </view>
+
+            <view bindtap="enterpostdetail" class="tiezi-item">
+                <view class="tiezi-left">
+                    <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
+                    <view class="tiezi-time">10分钟前</view>
+                </view>
+                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
+            </view>
+
+            <view bindtap="enterpostdetail" class="tiezi-item">
+                <view class="tiezi-left">
+                    <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
+                    <view class="tiezi-time">10分钟前</view>
+                </view>
+                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
+            </view>
+        </view>
     </view>
 </view>

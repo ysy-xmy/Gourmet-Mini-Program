@@ -1,36 +1,23 @@
 .main{
   width: 100vw;
-  background-color:rgba(255,255,255,1);
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding-bottom: 100rpx;
 }
-.header-bg{
-  width: 100%;
-  height: 350rpx;
-  background: linear-gradient(180deg, rgba(194, 227, 243, 1) 0%, rgba(106, 163, 193, 1) 100%);
-  box-shadow: 4px 6px 23px 0px rgba(169, 169, 169, 0.07);
-  border-bottom-left-radius: 50% 170rpx;
-  border-bottom-right-radius: 50% 170rpx;
-  display: flex;
-}
-.logo-text{
-   flex: 3;
-   height: 92rpx;
-   display: flex;
-   justify-content: center;
-}
-.logo{
-  width: 41px;
-  height: 100%;
-}
+
+
 .search{
   flex:7;
   height: 46px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 60rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 
 /* 以下是搜索框的样式 */
@@ -44,8 +31,12 @@
   background: white;
   border: 1px solid #dfe1e5;
   box-shadow: none;
-  border-radius: 24px;
   width: 90%;
+width: 315px;
+height: 36px;
+border-radius: 40px;
+background: rgba(255, 255, 255, 1);
+box-shadow: 2px 11px 39px 0px rgba(0, 0, 0, 0.3);
 }
 
 .searchbar:hover {
@@ -128,75 +119,31 @@
 }
 
 
-
-
-
-
-
-
-.bar{
-width: 90%;
-height: 260rpx;
-border-top-left-radius: 10px ;
-border-top-right-radius: 40px;
-border-bottom-right-radius: 10px;
-border-bottom-left-radius: 40px;
-background: rgba(255, 255, 255, 1);
-box-shadow: 2px 11px 32px 0px rgba(0, 0, 0, 0.3);
-position: absolute;
-top: 130px;
-transform: translateY(-50%);
-display: flex;
-flex-wrap: nowrap;
-
-
-}
-.bar-item-icon{
-  width:55px;
-  height: 55px;
-}
-.bar-item{
-  width: 25%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.bar-item-text{
-  font-size: 10px;
-font-weight: 500;
-line-height: 0px;
-color: rgba(102, 102, 102, 1);
-text-align: center;
-vertical-align: top;
-}
-
-.body{
-  width: 100vw;
-  margin-top: 60rpx;
-  margin-bottom: 100px;
-}
 .nav{
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-size: 20px;
   font-weight: bold;
   color: rgba(0, 0, 0, 1);
 }
-
 .list{
-  width: 100vw;
-  justify-content: center;
+  margin-top: 30rpx;
+  width: 90%;
+  padding-bottom: 50rpx;
+  border-radius: 10px;
+  background: rgba(242, 242, 242, 1);
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .card{
+ 
   display: flex;
   flex-direction: row;
   width: 90%;
   margin-top: 15px;
+  
 }
 .card-left{
   flex:3
@@ -262,3 +209,6 @@ line-height: 0px;
 color: rgba(1, 15, 7, 1);
 text-align: left;
 }
+
+
+

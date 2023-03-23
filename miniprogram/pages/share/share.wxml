@@ -11,7 +11,7 @@
   </view>
 </view>
 <template name="item">
-  <view class="item">
+  <view class="item" bindtap="enterpostdetail">
     <image class="item-img" src="{{url}}" mode="widthFix"></image>
     <view class="item-title-box">
       <navigator url="url" class="item-title">{{title}}</navigator>
@@ -24,4 +24,6 @@
       </view>
     </view>
   </view>
+  
 </template>
+<image bindtap="add" class="add" src="../../images/add.png"></image>

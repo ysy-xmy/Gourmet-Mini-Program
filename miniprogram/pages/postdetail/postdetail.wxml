@@ -1,0 +1,51 @@
+<view class="main">
+    <view class="poster-message">
+        <view class="poster">
+            <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="poster-avatar"></image>
+            <text class="poster-name">莞工小可爱</text>
+        </view>
+        <view class="post-date">2分钟前</view>
+    </view>
+    <view class="pic-show">
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+    </view>
+    <view class="post-label">#小狗#宠物#可爱</view>
+    <view class="post-text">
+        西伯利亚雪橇犬(俄语：Сибирский хаски，英语：Siberian Husky)是原产于西伯利亚的雪橇犬犬种，也叫哈士奇、二哈。该犬脚步轻快，动作...
+    </view>
+    <view class="post-card">
+        <view class="post-card-left">
+            <image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500" class="post-card-pic"></image>
+        </view>
+        <view class="post-card-right">
+            <view class="hangjz">
+                <view class="post-card-title">绵记</view>
+                <text class="card-distance">700m</text>
+            </view>
+            <view class="post-card-position">朝阳区东四十路860号</view>
+            <view class="hangjz">
+                <view class="card-star">星级：⭐⭐⭐</view>
+                <text class="card-price">人均消费：50/人</text>
+            </view>
+        </view>
+    </view>
+    <view class="comment">
+        <view class="comment-left">
+            <input placeholder="我也来说两句" class="input" />
+        </view>
+        <view class="comment-right">
+            <image src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-1024.png" class="love"></image>
+            <text>100</text>
+            <image src="https://cdn3.iconfinder.com/data/icons/arrows-set-12/512/export-1024.png" class="share"></image>
+            <text>100</text>
+        </view>
+    </view>
+</view>
