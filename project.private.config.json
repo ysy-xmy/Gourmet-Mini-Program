@@ -87,6 +87,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "shopdetail",
+          "pathName": "pages/shopdetail/shopdetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

@@ -24,15 +24,15 @@
     </view>
     <view bindtap="entershoplist" class="bar-item">
       <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
+      <text class="bar-item-text">景点</text>
     </view>
     <view bindtap="entershoplist" class="bar-item">
       <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
+      <text class="bar-item-text">KTV</text>
     </view>
     <view bindtap="entershoplist" class="bar-item">
       <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
+      <text class="bar-item-text">药店</text>
     </view>
   </view>
   <view class="body">
@@ -41,7 +41,7 @@
       <text class="play">玩乐</text>
     </view>
     <view class="list">
-      <view class="card">
+      <view  bindtap="entershopdetail" class="card">
         <view class="card-left">
           <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
         </view>
@@ -55,7 +55,7 @@
           <text class="card-price">人均消费：50/人</text>
         </view>
       </view>
-      <view class="card">
+      <view  bindtap="entershopdetail" class="card">
         <view class="card-left">
           <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
         </view>
@@ -69,7 +69,7 @@
           <text class="card-price">人均消费：50/人</text>
         </view>
       </view>
-      <view class="card">
+      <view bindtap="entershopdetail" class="card">
         <view class="card-left">
           <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
         </view>
@@ -83,7 +83,7 @@
           <text class="card-price">人均消费：50/人</text>
         </view>
       </view>
-      <view class="card">
+      <view  bindtap="entershopdetail" class="card">
         <view class="card-left">
           <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
         </view>

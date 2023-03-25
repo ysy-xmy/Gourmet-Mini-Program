@@ -1,0 +1,240 @@
+.main{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+}
+.top{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+}
+.swiper{
+  margin-top: 60rpx;
+  width: 600rpx;
+  height: 450rpx;
+}
+.swiper-item>image{
+  width: 600rpx;
+  height: 450rpx;
+}
+.swiper-item{
+  border-radius: 25px;
+
+}
+.shop-message{
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  
+}
+.shop-name{
+  font-size: 50rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+}
+.message-top{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 60rpx;
+}
+.message-bottom{
+  margin-left: 60rpx;
+  font-size: 20rpx;
+}
+.shop-message-left{
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.shop-message-right{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.like{
+  width: 50rpx;
+  height: 50rpx;
+}
+.share{
+  width: 50rpx;
+  height: 50rpx;
+}
+.record{
+  line-height: 100%;
+width: 100rpx;
+height: 36.26px;
+border-radius: 24.5px;
+background: linear-gradient(138.54deg, rgba(255, 204, 51, 1) 0%, rgba(255, 157, 23, 1) 100%);
+box-shadow: 0px 2px 13px 0px rgba(255, 172, 32, 0.5);
+font-size: 30rpx;
+font-weight: bold;
+color: rgba(255, 255, 255, 1);
+text-align: center;
+}
+.shop-introduction{
+  font-size: 32rpx;
+  font-weight: normal;
+  color: rgba(48, 56, 67, 1);
+  width: 100%;
+  margin-left: 60rpx;
+  margin-top: 15rpx;
+}
+.shop-detail{
+  width: 85%;
+  font-size: 24rpx;
+  font-weight: normal;
+  line-height: 32rpx;
+  color: rgba(153, 153, 153, 1);
+  text-align: justify;
+}
+.send{
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.btn{
+  border-radius: 24.5px;
+  background: linear-gradient(138.54deg, rgba(255, 204, 51, 1) 0%, rgba(255, 157, 23, 1) 100%);
+  box-shadow: 0px 2px 13px 0px rgba(255, 172, 32, 0.5);
+  color: #fff;
+  font-size: 30rpx;
+}
+.dgutcomment{
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: rgba(211, 240, 245, 1);
+  box-shadow: 0px 2px 171px 0px rgba(19, 18, 18, 0.33);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: fixed;
+  top: 85%;
+  transition: 1s;
+}
+.dgutcomment-active{
+  top: 20%;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: rgba(211, 240, 245, 1);
+  box-shadow: 0px 2px 171px 0px rgba(19, 18, 18, 0.33);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: absolute;
+ transition: 1s;
+ padding-bottom: 100rpx;
+}
+.line{
+  margin-top: 30rpx;
+  width: 300rpx;
+  height: 4px;
+  opacity: 1;
+  background: rgba(204, 204, 204, 1);
+}
+.title{
+  font-size: 32rpx;
+  width: 100%;
+  line-height: 32rpx;
+  text-align: center;
+  margin-top: 50rpx;
+  font-weight: bold;
+  position: relative;
+}
+.text{
+  width: 250px;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  height: 32rpx;
+  font-weight: normal;
+  color: rgba(153, 153, 153, 1);
+  text-align: right;
+  position: absolute;
+  left: 100%;
+  transform: translateX(-100%);
+  padding-right: 10rpx;
+}
+.poster-message{
+  width: 90%;
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  
+}
+.poster{
+  display: flex;
+  align-items: center;
+
+}
+.poster-avatar{
+ width: 90rpx;
+ height: 90rpx;
+ border-radius: 50%;
+}
+.poster-name{
+ height: 200rpx;
+ text-align: left;
+ line-height: 200rpx;
+ padding-left: 20rpx;
+ font-size: 32rpx;
+font-weight: normal;
+color: rgba(0, 0, 0, 1);
+}
+.post-date{
+  padding-top: 50rpx;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  text-align: right;
+  align-items: flex-end;
+}
+.pic-show{
+  width: 95%;
+  height: 670rpx;
+ 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.pic-item{
+  width: 200rpx;
+  margin: 4rpx;
+  border-radius: 10rpx;
+  height: 200rpx;
+  margin-right: 25rpx;
+  
+}
+.post-label{
+  width: 95%;
+  padding-left: 40rpx;
+  font-size: 24rpx;
+  font-weight: normal;
+  color: #1bcc91fd;
+}
+.post-text{
+  width: 90%;
+  margin-top: 20rpx;
+  justify-self: flex-start;
+  font-size: 28rpx;
+color: rgba(102, 102, 102, 1);
+}
