@@ -61,8 +61,8 @@ Page({
 
 
   onLoad(options) {
-    const that =this
     wx.cloud.init()
+    const that =this
     wx.cloud.callFunction({
     name:'helloworld',
     data:{
@@ -70,28 +70,31 @@ Page({
     }
   }).then(res=>{
     appdata.globalData.openid=res.result.userInfo.openId
+  
   })
-   
   db.collection('user').where({
     _openid: appdata.globalData.openid
   }).get({
     success: function (res) {
       if(res.data.length>0){
+      
       appdata.globalData.hasuserinfo=true//标明已获取到用户信息
-      let userinfo=that.data.userinfo
+      let userinfo={}
+ 
       userinfo.nickName=res.data[0].user_name
       userinfo.avatarUrl=res.data[0].user_avatar
       userinfo.user_signature=res.data[0].user_signature
       appdata.globalData.userinfo=userinfo//全局拿到用户信息
+      console.log(appdata.globalData.userinfo)
       that.setData({
-        hasuserinfo: appdata.globalData.hasuserinfo,
-        userinfo:userinfo,
-        user_signature:userinfo.user_signature
-      })
+        hasuserinfo:appdata.globalData.hasuserinfo,
+        userinfo:appdata.globalData.userinfo,
+       })
     }}
   
   })
 
+  
 
 
   },
@@ -100,22 +103,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    if(appdata.globalData.hasuserinfo==true){
+      console.log(appdata.globalData.hasuserinfo)
+      this.setData({
+        hasuserinfo:appdata.globalData.hasuserinfo,
+        userinfo:appdata.globalData.userinfo,
+       })
 
-    this.setData({
-      hasuserinfo:appdata.globalData.hasuserinfo,
-      userinfo:appdata.globalData.userinfo,
-      user_signature:appdata.globalData.userinfo.user_signature
-     })
 
-
-
+    }
+   
     if (typeof this.getTabBar === 'function' &&
     this.getTabBar()) {
     this.getTabBar().setData({

@@ -94,7 +94,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    if(appdata.globalData.hasuserinfo==true){
+      console.log(appdata.globalData.hasuserinfo)
+      this.setData({
+        hasuserinfo:appdata.globalData.hasuserinfo,
+        userinfo:appdata.globalData.userinfo,
+       })
 
+
+    }
   },
 
   /**

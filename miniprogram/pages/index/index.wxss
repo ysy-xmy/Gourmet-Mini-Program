@@ -1,12 +1,13 @@
-.main{
+.main {
   width: 100vw;
-  background-color:rgba(255,255,255,1);
+  background-color: rgba(255, 255, 255, 1);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: center;
 }
-.header-bg{
+
+.header-bg {
   width: 100%;
   height: 350rpx;
   background: linear-gradient(180deg, rgba(194, 227, 243, 1) 0%, rgba(106, 163, 193, 1) 100%);
@@ -15,18 +16,21 @@
   border-bottom-right-radius: 50% 170rpx;
   display: flex;
 }
-.logo-text{
-   flex: 3;
-   height: 92rpx;
-   display: flex;
-   justify-content: center;
+
+.logo-text {
+  flex: 3;
+  height: 92rpx;
+  display: flex;
+  justify-content: center;
 }
-.logo{
+
+.logo {
   width: 41px;
   height: 100%;
 }
-.search{
-  flex:7;
+
+.search {
+  flex: 7;
   height: 46px;
   display: flex;
   justify-content: flex-start;
@@ -50,7 +54,7 @@
 
 .searchbar:hover {
   box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
-  border-color: rgba(223,225,229,0);
+  border-color: rgba(223, 225, 229, 0);
 }
 
 .searchbar-wrapper {
@@ -134,28 +138,30 @@
 
 
 
-.bar{
-width: 90%;
-height: 260rpx;
-border-top-left-radius: 10px ;
-border-top-right-radius: 40px;
-border-bottom-right-radius: 10px;
-border-bottom-left-radius: 40px;
-background: rgba(255, 255, 255, 1);
-box-shadow: 2px 11px 32px 0px rgba(0, 0, 0, 0.3);
-position: absolute;
-top: 130px;
-transform: translateY(-50%);
-display: flex;
-flex-wrap: nowrap;
+.bar {
+  width: 90%;
+  height: 260rpx;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 40px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 2px 11px 32px 0px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 130px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: nowrap;
 
 
 }
-.bar-item-icon{
-  width:55px;
+
+.bar-item-icon {
+  width: 55px;
   height: 55px;
 }
-.bar-item{
+
+.bar-item {
   width: 25%;
   height: 100%;
   display: flex;
@@ -163,21 +169,23 @@ flex-wrap: nowrap;
   align-items: center;
   flex-direction: column;
 }
-.bar-item-text{
+
+.bar-item-text {
   font-size: 10px;
-font-weight: 500;
-line-height: 0px;
-color: rgba(102, 102, 102, 1);
-text-align: center;
-vertical-align: top;
+  font-weight: 500;
+  line-height: 0px;
+  color: rgba(102, 102, 102, 1);
+  text-align: center;
+  vertical-align: top;
 }
 
-.body{
+.body {
   width: 100vw;
   margin-top: 60rpx;
   margin-bottom: 100px;
 }
-.nav{
+
+.nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -186,79 +194,89 @@ vertical-align: top;
   color: rgba(0, 0, 0, 1);
 }
 
-.list{
+.list {
   width: 100vw;
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
-.card{
+
+.card {
   display: flex;
   flex-direction: row;
   width: 90%;
   margin-top: 15px;
 }
-.card-left{
-  flex:3
+
+.card-left {
+  flex: 3
 }
-.card-right{
-  flex:7
+
+.card-right {
+  flex: 7
 }
-.hangjz{
+
+.hangjz {
   display: flex;
   justify-content: space-between;
 }
-.card-title{
+
+.card-title {
   margin-left: 15px;
   font-size: 20px;
   font-weight: normal;
   color: rgba(0, 0, 0, 1);
 }
-.card-distance{
-width: 50%;
-height: 26px;
-line-height: 26px;
-font-size: 14px;
-font-weight: 400;
-letter-spacing: 0.6px;
-color: rgba(34, 164, 93, 1);
-text-align: right;
-}
-.card-detail{
 
-margin-left: 15px;
-font-size: 16px;
-font-weight: 400;
-letter-spacing: -0.4px;
-width: 204px;
-height: 45px;
-opacity: 0.64;
-overflow: hidden;
-color: rgba(1, 15, 7, 1);
+.card-distance {
+  width: 50%;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  color: rgba(34, 164, 93, 1);
+  text-align: right;
 }
-.card-img{
+
+.card-detail {
+
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  width: 204px;
+  height: 45px;
+  opacity: 0.64;
+  overflow: hidden;
+  color: rgba(1, 15, 7, 1);
+}
+
+.card-img {
   border-radius: 8px;
   width: 100px;
   height: 90px;
-  
-}
-.card-star{
-  font-size: 14px;
-font-weight: 400;
-letter-spacing: -0.25px;
-line-height: 0px;
-color: rgba(1, 15, 7, 1);
-text-align: left;
-margin-left: 15px;
-opacity: 0.74;
 
 }
-.card-price{
+
+.card-star {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 0px;
+  color: rgba(1, 15, 7, 1);
+  text-align: left;
+  margin-left: 15px;
+  opacity: 0.74;
+
+}
+
+.card-price {
   margin-left: 10px;
   font-size: 14px;
-font-weight: 400;
-letter-spacing: -0.25px;
-line-height: 0px;
-color: rgba(1, 15, 7, 1);
-text-align: left;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 0px;
+  color: rgba(1, 15, 7, 1);
+  text-align: left;
 }

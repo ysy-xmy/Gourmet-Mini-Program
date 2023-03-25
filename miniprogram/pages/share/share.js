@@ -61,7 +61,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-     
+    hasuserinfo:false,
+    userinfo:{},
+    user_signature:"",
       list: [{
         name: '苏苏',
         num: '1',
@@ -186,7 +188,35 @@ Page({
 
  },
   onLoad: function (options) {
-    
+    const that =this
+    wx.cloud.init()
+    wx.cloud.callFunction({
+    name:'helloworld',
+    data:{
+      message:'helloCloud',
+    }
+  }).then(res=>{
+    appdata.globalData.openid=res.result.userInfo.openId
+  })
+   
+  db.collection('user').where({
+    _openid: appdata.globalData.openid
+  }).get({
+    success: function (res) {
+      if(res.data.length>0){
+      appdata.globalData.hasuserinfo=true//标明已获取到用户信息
+      let userinfo=that.data.userinfo
+      userinfo.nickName=res.data[0].user_name
+      userinfo.avatarUrl=res.data[0].user_avatar
+      userinfo.user_signature=res.data[0].user_signature
+      appdata.globalData.userinfo=userinfo//全局拿到用户信息
+    }}
+  
+  })
+
+
+
+
   },
 
   /**
@@ -200,6 +230,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    if(appdata.globalData.hasuserinfo==true){
+      console.log(appdata.globalData.hasuserinfo)
+      this.setData({
+        hasuserinfo:appdata.globalData.hasuserinfo,
+        userinfo:appdata.globalData.userinfo,
+       })
+
+
+    }
+
+
+
     if (typeof this.getTabBar === 'function' &&
     this.getTabBar()) {
     this.getTabBar().setData({
