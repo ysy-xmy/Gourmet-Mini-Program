@@ -27,7 +27,8 @@ background: rgba(245, 245, 245, 1);
   padding-left: 10rpx;
   padding-top: 20rpx;
   width: 100%;
-  height: 80rpx;
+  height: 120rpx;
+  font-size: 40rpx;
 }
 .add{
   width: 60rpx;

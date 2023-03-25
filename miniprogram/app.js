@@ -15,5 +15,14 @@ App({
     // }
 
     this.globalData = {};
+  },
+  globalData:{
+     hasuserinfo:false,
+     userinfo:{},
+     user_openid:""
+
   }
+
+
+
 });

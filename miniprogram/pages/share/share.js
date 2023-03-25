@@ -52,7 +52,9 @@
   //   ]
 //   }
 // })
-
+var appdata=getApp()
+wx.cloud.init()
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -118,10 +120,68 @@ Page({
     
   })
  },
+ getUserProfile(e) {
+  const that=this
+  wx.getUserProfile({
+    desc: '用于展示用户信息,提供服务', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+    success: (res) => {
+      var appdata=getApp()
+      appdata.globalData.userinfo=res.userInfo
+      appdata.globalData.hasuserinfo=true
+      const user = db.collection('user')
+      user.add({
+        // data 字段表示需新增的 JSON 数据
+        data: {
+          user_name:res.userInfo.nickName,
+          user_avatar:res.userInfo.avatarUrl,
+          user_signature:"请写下你的个性签名吧,这样别人才能更好地认识你"
+        },
+      success: function(res) {
+        //  // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
+        // db.collection('user_message').doc(res._id).get({
+        //   success: function(res) {
+        //     // res.data 包含该记录的数据
+        //     appdata.globalData.openId=res.data._openId
+        //     // appdata.globalData._id=res.data._id
+        //   }
+        // })
+        wx.navigateTo({
+          url: '../post/post',
+        })
+      }
+      })
+     
+      
+
+      
+    }
+  })
+},
+ nologintip:function () {
+   const that =this
+  wx.showModal({
+    title: '你还没有登录',
+    content: '该功能需要登录后再使用',
+    success (res) {
+      if (res.confirm) {
+        that.getUserProfile()
+        
+      } else if (res.cancel) {
+        
+      }
+    }
+  })
+},
  add(){
-   wx.navigateTo({
-     url: '../post/post',
-   })
+   if(appdata.globalData.hasuserinfo==true){
+    wx.navigateTo({
+      url: '../post/post',
+    })
+   }else{
+    this.nologintip()
+
+   }
+
 
 
  },
