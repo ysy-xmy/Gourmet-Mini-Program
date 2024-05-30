@@ -1,28 +1,36 @@
 {
   "pages": [
+    "pages/choosefood/choosefood",
     "pages/index/index",
     "pages/share/share",
     "pages/my/my",
     "pages/postdetail/postdetail",
     "pages/post/post",
     "pages/showlist/showlist",
-    "pages/shopdetail/shopdetail"
+    "pages/shopdetail/shopdetail",
+    "pages/shopcommentpost/shopcommentpost",
+    "pages/passage/passage"
+
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#edf5ff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#c1e3f3",
+    "navigationBarBackgroundColor": "#edf5ff",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
   },
   "tabBar": {
     "custom": true,
     "list":[{
+      "pagePath": "pages/choosefood/choosefood",
+      "text":"随机"
+    },{
       "pagePath": "pages/index/index",
-      "text":"首页"
+      "text":"店家"
     },{
       "pagePath": "pages/share/share",
-      "text":"广场"
+      "text":"圈子"
     },{
       "pagePath": "pages/my/my",
       "text":"我的"
@@ -32,11 +40,8 @@
   "borderStyle": "white",
   "color": "#353536",
   "selectedColor": "#76b510"
-
-
-
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading":"requiredComponents"
 }

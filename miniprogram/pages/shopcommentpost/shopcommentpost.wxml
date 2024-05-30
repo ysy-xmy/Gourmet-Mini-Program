@@ -1,0 +1,52 @@
+<view class="main">
+    <view class="card">
+        <textarea model:value="{{post_text}}" style="letter-spacing: 1.5px;" maxlength="0" class="text-edit" placeholder="分享一下你对这家店的评价吧"></textarea>
+<view class="img-wrap">
+            <view class="imglist">
+                <view class="item" wx:for="{{imgs}}" wx:key="item">
+                    <image mode="aspectFit" bindtap="previewImage" data-index="{{index}}"  src="{{item}}" ></image>
+                    <view class='delete' bindtap='deleteImg' data-index="{{index}}">
+                        <image src="../../images/add.png"></image>
+                    </view>
+                </view>
+                <view class="last-item" wx:if="{{imgs.length >= 9 ? false : true}}" bindtap="chooseImage">
+                    <image src="../../images/add-pic.png" class="sign-img"></image>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <view class="stars"><text class="star-text">评价：</text>
+  <radio-group bindchange="onRatingChange">
+    <label class="star" wx:for="{{[1.0, 2.0, 3.0, 4.0, 5.0]}}" wx:for-item="itss" wx:for-index="idxss" wx:key="{{item}}">
+      <radio style="display: none;" value="{{itss}}" />
+      <image class="star-icon" wx:if="{{itss>ratingValue}}" src="https://cdn3.iconfinder.com/data/icons/token/128/Star-Favorites.png" mode="aspectFit" />
+      <image class="star-icon"  wx:if="{{itss<=ratingValue}}" src="https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-512.png" mode="aspectFit" />
+    </label>
+    <text class="ratingValue">{{ratingValue}}.0</text>
+  </radio-group>
+</view>
+
+    <view style="display: none;" class="list-title">打卡门店</view>
+    <view  class="list">
+        <view style="display: none;" class="post-card">
+            <view  class="post-card-left">
+                <image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500" class="post-card-pic"></image>
+            </view>
+            <view  class="post-card-right">
+                <view class="hangjz">
+                    <view class="post-card-title">绵记</view>
+                    <text class="card-distance">700m</text>
+                </view>
+                <view class="post-card-position">朝阳区东四十路860号</view>
+                <view class="hangjz">
+                    <view class="card-star">星级：⭐⭐⭐</view>
+                    <text class="card-price">人均消费：50/人</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="send">
+        <button bindtap="uploadImage" style="width: 75%;" class="btn">发布</button>
+    </view>
+</view>

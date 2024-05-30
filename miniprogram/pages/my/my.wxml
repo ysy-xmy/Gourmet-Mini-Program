@@ -1,13 +1,15 @@
 <view class="main">
     <view class="body-top">
-        <image src="" class="bg"></image>
+        <image mode="aspectFill" src='{{userinfo.bgurl}}'  class="bg"></image>
+        <view  class="bg-bottom"></view>
+        <view bindtap="chooseImagetobg" style="width: 80rpx;height: 40rpx;" class="change-bg">更换</view>
         <view wx:if="{{hasuserinfo==true}}" class="user-card">
             <view class="user-card-left">
-                <image src="{{userinfo.avatarUrl}}" class="avatar"></image>
+                <image bindtap="chooseImage" src="{{userinfo.avatarUrl}}" class="avatar"></image>
             </view>
             <view class="user-card-right">
-                <view class="user-card-name">{{userinfo.nickName}}</view>
-                <view class="user-card-detail">{{userinfo.user_signature}}</view>
+                <view class="user-card-name">{{userinfo.nickName}}<image bindtap="changename" src="../../images/change_nickname.png" class="change-name"></image></view>
+                <!-- <view class="user-card-detail">{{userinfo.user_signature}}<image bindtap="changesignature" src="../../images/change-name.png" class="change-name"></image></view> -->
             </view>
         </view>
         <view wx:if="{{hasuserinfo==false}}" class="user-card">
@@ -16,62 +18,74 @@
                 <view class="card-text">这个人很懒，连登录都懒得~莞工小莞无法向你提供优质服务哦~</view>
             </view>
         </view>
+        <view class="message-bar">
+   <view class="message-bar-item">
+    <view class="message-bar-item-number">{{mycomments.length}}</view>
+    <view class="message-bar-item-text">帖子数</view>
+   </view>
+   <view class="message-bar-item">
+    <view class="message-bar-item-number">{{myshop.length}}</view>
+    <view class="message-bar-item-text">收藏数</view>
+   </view>
+  
+  </view>
     </view>
+    <!-- <view class="alert-box">
+  <view class="alert-message">
+  <view class="alert-left">
+   <image class="alert-logo" src="../../images/alert.png"></image>
+  </view>
+   <text class="alert-message-text">新用户下单立减10元！</text>
+   <view class="alert-right">
+   <image class="alert-cancel" src="../../images/cancel.png"></image>
+  </view>
+  </view>
+  </view> -->
     <view class="body-bottom">
         <view class="tabbar">
-            <view class="tabbar-item ">帖子</view>
-            <view class="tabbar-item">评价</view>
-            <view class="tabbar-item">消息</view>
-            <view class="tabbar-item">收藏</view>
+            <view class="{{chosen==0?'tabbar-item-active':'tabbar-item'}}" bindtap="choosetiezi" >帖子</view>
+            <view class="{{chosen==1?'tabbar-item-active':'tabbar-item'}}" bindtap="choosecollect">收藏</view>
+            <view class="radio-inputs"></view>
         </view>
         <view class="context">
             <view wx:if="{{hasuserinfo==false}}" class="nologin">
-                <text class="nologin-text">你还没有登录，帖子找不到了555~</text>
+              <image src="../../images/nologin.png" class="nologinimg"></image>
+              <text class="nologintip" >你还没有登录哦</text>
             </view>
-            <view wx:if="{{hasuserinfo==true}}" class="tiezi">
-                <view bindtap="enterpostdetail" class="tiezi-item">
+            <view  wx:if="{{hasuserinfo==true &&chosen==0}}" class="tiezi">
+            
+                <view wx:for="{{mycomments}}" wx:for-item="it" wx:for-index="idx" wx:key="idx" bindtap="enterpostdetail" class="tiezi-item" data-index="{{idx}}">
+                 
                     <view class="tiezi-left">
-                        <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
-                        <view class="tiezi-time">10分钟前</view>
+                        <view class="tiezi-text">{{it.post_text}}</view>
+                        <view class="tiezi-time">{{it.post_date}}</view>
                     </view>
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
+                    <image mode="aspectFill" src="{{it.post_images[0]}}" class="tiezi-avatar"></image>
+                
+                 
                 </view>
-                <view bindtap="enterpostdetail" class="tiezi-item">
-                    <view class="tiezi-left">
-                        <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
-                        <view class="tiezi-time">10分钟前</view>
-                    </view>
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
-                </view>
-                <view bindtap="enterpostdetail" class="tiezi-item">
-                    <view class="tiezi-left">
-                        <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
-                        <view class="tiezi-time">10分钟前</view>
-                    </view>
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
-                </view>
-                <view bindtap="enterpostdetail" class="tiezi-item">
-                    <view class="tiezi-left">
-                        <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
-                        <view class="tiezi-time">10分钟前</view>
-                    </view>
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
-                </view>
-                <view bindtap="enterpostdetail" class="tiezi-item">
-                    <view class="tiezi-left">
-                        <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
-                        <view class="tiezi-time">10分钟前</view>
-                    </view>
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
-                </view>
-                <view bindtap="enterpostdetail" class="tiezi-item">
-                    <view class="tiezi-left">
-                        <view class="tiezi-text">万达哪里好玩啊，推荐一下呗，谢谢啦!</view>
-                        <view class="tiezi-time">10分钟前</view>
-                    </view>
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="tiezi-avatar"></image>
-                </view>
+                
+             
             </view>
+
+            <view wx:if="{{hasuserinfo==true &&chosen==1}}" class="collect" >
+              <view wx:for="{{myshop}}" wx:for-item="its" wx:for-index="idxs" wx:key="idxs" bindtap="entershopdetail" class="tiezi-item" data-index="{{idxs}}">
+                    <view class="tiezi-left">
+                        <view class="tiezi-text">{{its.shop_name}}</view>
+                      
+                    </view>
+                    <image src="{{its.shop_image}}" class="tiezi-avatar"></image>
+                </view>
+
+
+            
+            </view>
+
+            
         </view>
     </view>
 </view>
+<modal class="modal-changename" title="更改昵称" wx:if="{{change_name}}" bindcancel="changenamecancel"   show-cancel-button="false"  confirm-text="确认" bindconfirm="changenameconfirm">
+  <input type="text" focus="{{change_name}}" placeholder="请输入新的昵称" name="text" id="text" model:value="{{inputname}}" class="input-field" autocomplete="name">{{inputname}}</input></modal>
+  <!-- <modal class="modal-changesignature" title="更改签名" wx:if="{{changesignature}}" bindcancel="changesignaturecancel"   show-cancel-button="false"  confirm-text="确认" bindconfirm="changesignatureconfirm">
+  <input type="text" focus="{{changesignature}}" placeholder="请输入新的签名" name="text" id="text" model:value="{{inputsignature}}" class="input-field" autocomplete="name">{{inputsignature}}</input></modal> -->

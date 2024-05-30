@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    
+  },
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "随机菜谱",
+  "navigationBarTextStyle": "black"
+}

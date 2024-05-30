@@ -1,102 +1,121 @@
 <view class="main">
   <view class="header-bg">
     <view class="logo-text">
-      <image class="logo" src="../../images/logo.png"></image>
+     <text class="logo-text-text">莞城校区</text>
     </view>
     <view class="search">
-      <view class="searchbar">
+      <view bindtap="entershoplistall" class="searchbar">
         <view class="searchbar-wrapper">
-          <view class="searchbar-left">
-            <image class="search-icon" src="../../images/search.png"></image>
-          </view>
+         
           <view class="searchbar-center">
             <view class="searchbar-input-spacer"></view>
-            <input type="text" class="searchbar-input" maxlength="2048" name="q" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="Search Google" />
+            <input type="text" class="searchbar-input" maxlength="2048" name="q" autocapitalize="off" autocomplete="off" title="Search" role="combobox" placeholder="搜索店家名称" />
+          </view>
+          <view class="searchbar-right">
+             <button style="width: 128rpx;" class="searchbar-btn">搜索</button>
+             
           </view>
         </view>
       </view>
     </view>
   </view>
   <view class="bar">
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
-      <text class="bar-item-text">美食</text>
+    <view bindtap="entershoplist" data-type="food" class="bar-item">
+      <image class="bar-item-icon" src="../../images/shop.png"></image>
+      <text class="bar-item-text">校外店家</text>
+
     </view>
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
+    <view bindtap="entermessage" data-type="food" class="bar-item">
+    <image class="bar-item-icon" src="../../images/word.png"></image>
+      <text class="bar-item-text">给我们留言</text>
+    </view>
+    <!-- <view bindtap="entershoplist" class="bar-item">
+      <image class="bar-item-icon" src="../../images/view.png"></image>
       <text class="bar-item-text">景点</text>
-    </view>
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
+    </view> -->
+    <!-- <view bindtap="entershoplist" data-type="KTV" class="bar-item">
+      <image class="bar-item-icon" src="../../images/KTV.png"></image>
       <text class="bar-item-text">KTV</text>
     </view>
-    <view bindtap="entershoplist" class="bar-item">
-      <image class="bar-item-icon" src="../../images/index.png"></image>
+    <view bindtap="entershoplist" data-type="medicine" class="bar-item">
+      <image class="bar-item-icon" src="../../images/medicine.png"></image>
       <text class="bar-item-text">药店</text>
-    </view>
+    </view> -->
   </view>
-  <view class="body">
-    <view class="nav">
-      <text class="eat">吃喝</text>
-      <text class="play">玩乐</text>
-    </view>
-    <view class="list">
-      <view  bindtap="entershopdetail" class="card">
-        <view class="card-left">
-          <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
-        </view>
-        <view class="card-right">
-          <view class="hangjz">
-            <text class="card-title">绵记</text>
-            <text class="card-distance">700m</text>
-          </view>
-          <view class="card-detail">每一口，都是舌尖上的美味。绵记美食，让你一试难忘。快来品味我们的独特风味，开启美食之旅吧</view>
-          <text class="card-star">星级：⭐⭐⭐</text>
-          <text class="card-price">人均消费：50/人</text>
-        </view>
-      </view>
-      <view  bindtap="entershopdetail" class="card">
-        <view class="card-left">
-          <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
-        </view>
-        <view class="card-right">
-          <view class="hangjz">
-            <text class="card-title">绵记</text>
-            <text class="card-distance">700m</text>
-          </view>
-          <view class="card-detail">每一口，都是舌尖上的美味。绵记美食，让你一试难忘。快来品味我们的独特风味，开启美食之旅吧</view>
-          <text class="card-star">星级：⭐⭐⭐</text>
-          <text class="card-price">人均消费：50/人</text>
-        </view>
-      </view>
-      <view bindtap="entershopdetail" class="card">
-        <view class="card-left">
-          <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
-        </view>
-        <view class="card-right">
-          <view class="hangjz">
-            <text class="card-title">绵记</text>
-            <text class="card-distance">700m</text>
-          </view>
-          <view class="card-detail">每一口，都是舌尖上的美味。绵记美食，让你一试难忘。快来品味我们的独特风味，开启美食之旅吧</view>
-          <text class="card-star">星级：⭐⭐⭐</text>
-          <text class="card-price">人均消费：50/人</text>
-        </view>
-      </view>
-      <view  bindtap="entershopdetail" class="card">
-        <view class="card-left">
-          <image class="card-img" src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image>
-        </view>
-        <view class="card-right">
-          <view class="hangjz">
-            <text class="card-title">绵记</text>
-            <text class="card-distance">700m</text>
-          </view>
-          <view class="card-detail">每一口，都是舌尖上的美味。绵记美食，让你一试难忘。快来品味我们的独特风味，开启美食之旅吧</view>
-          <text class="card-star">星级：⭐⭐⭐</text>
-          <text class="card-price">人均消费：50/人</text>
-        </view>
-      </view>
+  <view class="alert-box">
+  <view class="alert-message">
+  <view class="alert-left">
+   <image class="alert-logo" src="../../images/alert.png"></image>
+  </view>
+   <text class="alert-message-text">此版本为内测版本</text>
+   <view class="alert-right">
+   <image class="alert-cancel" src="../../images/cancel.png"></image>
+  </view>
+  </view>
+  </view>
+  <view class="Recommended-food">
+    
+   <view class="Recommended-food-text"><text class="Recommended-food-text-line"></text>美食测评</view>
+
+   <view class="Recommended-food-pic">
+   <view bindtap="enterpassage" data-url="https://mp.weixin.qq.com/s/uoje2FqyDjHAG8lqlNldjA" class="one-pic">
+    <image src="cloud://tasty-pig-6ga0mjeg8cbc6f94.7461-tasty-pig-6ga0mjeg8cbc6f94-1318720652/passage_bg/微信图片_20230721214828.jpg" class="Recommended-food-pic-item" ></image>
+
+    <view class="Recommended-food-pic-bottom">
+    <view class="Recommended-food-pic-title">雪糕测评</view>
+    <view class="Recommended-food-pic-text">这个夏天，来一根雪糕吧</view>
+  </view>
+  </view>
+  <view class="one-pic" bindtap="enterpassage" data-url="https://mp.weixin.qq.com/s/f6QJKcH0Ts7itl6lF0YVsw">
+    <image src="cloud://tasty-pig-6ga0mjeg8cbc6f94.7461-tasty-pig-6ga0mjeg8cbc6f94-1318720652/passage_bg/微信图片_20230721214500.jpg" class="Recommended-food-pic-item"></image>
+    <view class="Recommended-food-pic-bottom">
+    <view class="Recommended-food-pic-title">果蜜园测评</view>
+    <view class="Recommended-food-pic-text">来这里喝一杯吧</view>
     </view>
   </view>
 </view>
+  </view>
+  <view class="shop-show">
+    <view class="body">
+      <view class="Recommended-food-text">推荐店家</view>
+    <view class="list" wx:for="{{shops}}" wx:for-index="idx" wx:key="index" wx:for-item="it" wx:if="{{current == 0}}">
+      <view bindtap="entershopdetail" data-type="food"  data-index="{{idx}}" class="card" >
+        <view class="card-left">
+          <image class="card-img" src="{{it.shop_image}}"></image>
+        </view>
+        <view class="card-right">
+          <view class="hangjz">
+            <text class="card-title">{{it.shop_name}}</text>
+            <text class="card-distance">{{it.shop_distance}}m</text>
+          </view>
+          <view class="card-detail">{{it.shop_introduction}}</view>
+          <text class="card-star">星级：{{it.shop_star}}</text>
+          <text class="card-price">人均消费：{{it.shop_consumption}}/人</text>
+        </view>
+      </view>
+  
+    </view>
+    <view class="list" wx:for="{{play}}" wx:for-index="idxs" wx:key="index" wx:for-item="it" wx:if="{{current == 1}}">
+      <view bindtap="entershopdetail" data-type="play" data-index="{{idxs}}" class="card" >
+        <view class="card-left">
+          <image class="card-img" src="{{it.shop_image}}"></image>
+        </view>
+        <view class="card-right">
+          <view class="hangjz">
+            <text class="card-title">{{it.shop_name}}</text>
+            <text class="card-distance">{{it.shop_distance}}m</text>
+          </view>
+          <view class="card-detail">{{it.shop_introduction}}</view>
+          <text class="card-star">星级：{{it.shop_star}}</text>
+          <text class="card-price">人均消费：{{it.shop_consumption}}/人</text>
+        </view>
+      </view>
+    </view>
+</view>
+</view>
+</view>
+
+
+
+  <modal class="modal-changename" title="留言给我们（匿名）" wx:if="{{message}}" bindcancel="sendcancel"   show-cancel-button="false"  confirm-text="发送" bindconfirm="sendconfirm">
+  <input type="text" focus="{{message}}" placeholder="你想要跟我们说什么" name="text" id="text" model:value="{{inputmessage}}" class="input-field" autocomplete="name">{{inputname}}</input></modal>

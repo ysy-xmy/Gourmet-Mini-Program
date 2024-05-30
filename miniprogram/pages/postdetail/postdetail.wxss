@@ -16,7 +16,14 @@
   align-content: center;
 
 }
+.post-top{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
+}
 .poster {
   display: flex;
   align-items: center;
@@ -50,23 +57,27 @@
 
 .pic-show {
   width: 95%;
-  height: 670rpx;
-
+  margin-bottom: 30rpx;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
+  height: 70vh;
+
 }
 
 .pic-item {
-  width: 200rpx;
+  width: 100%;
   margin: 4rpx;
   border-radius: 10rpx;
-  height: 200rpx;
+  height: 100%;
   margin-right: 25rpx;
 
 }
-
+.pic-item-photo{
+  width: 100%;
+  height: 100%;
+}
 .post-label {
   width: 95%;
   padding-left: 40rpx;
@@ -80,7 +91,8 @@
   margin-top: 20rpx;
   justify-self: flex-start;
   font-size: 28rpx;
-  color: rgba(102, 102, 102, 1);
+  color: rgb(0, 0, 0);
+  margin-bottom: 40rpx;
 }
 
 .post-card {
@@ -177,12 +189,15 @@
 }
 
 .line {
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
+  width: 80%;
+  height: 0px;
+  background-color: rgb(209, 207, 207);
+
+
 }
 
 .show-comment {
+  margin-top: 30rpx;
   width: 100vw;
   background-color: #fff;
   margin-bottom: 100rpx;
@@ -190,14 +205,13 @@
 }
 
 .comment-total {
-  margin-left: 90rpx;
+  margin-left: 50rpx;
   width: 100vw;
   text-align: left;
   margin-top: 15rpx;
   color: #858585;
   background-color: #fff;
   height: 50rpx;
-
 }
 
 .comment-item {
@@ -206,8 +220,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-
-
+  margin-bottom: 30rpx;
   align-content: flex-start;
   flex-wrap: wrap;
 }
@@ -215,17 +228,18 @@
 .comment-item-left {
   height: 70%;
   display: flex;
-  width: 50%;
-  justify-content: center;
+  width: 80%;
+  justify-content: flex-start;
   align-content: center;
   align-items: center;
   margin-top: 10rpx;
   margin-bottom: 10rpx;
+ 
 }
 
 .comment-item-right {
   margin-top: 10rpx;
-  width: 50%;
+  width: 20%;
   margin-bottom: 10rpx;
   height: 70%;
   display: flex;
@@ -239,12 +253,13 @@
   width: 80rpx;
   height: 80rpx;
   border-radius: 50%;
-
+margin-left: 15px;
 
 }
 
 .comment-item-main {
   margin-left: 20rpx;
+  width: 70%;
 }
 
 .comment-item-name {
@@ -253,16 +268,21 @@
 
 .comment-item-text {
   color: #444444;
+  width: 100%;
+
+   height:auto;
+ word-break:break-all;
 }
 
 .comment-item-date {
   color: #9c9c9c;
+  font-size: 20rpx;
 }
 
 .agree {
-
-  width: 50rpx;
-  height: 50rpx;
+  opacity: 0.5;
+  width: 30rpx;
+  height: 30rpx;
   padding-right: 20rpx;
 }
 
@@ -271,19 +291,20 @@
   
 } */
 .agree-num {
-  width: 100%;
-  text-align: right;
-  padding-right: 25rpx;
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
   display: inline-block;
+  opacity: 0.6;
 }
 
 .comment-item-bottom {
   display: flex;
   align-self: flex-end;
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: flex-start;
-  margin-left: 20%;
+  margin-left: 10%;
   flex-wrap: wrap;
 }
 
@@ -296,25 +317,26 @@
   display: flex;
   width: 100vw;
   background-color: #fff;
-  height: 76rpx;
+  height: 100rpx;
   position: fixed;
   top: 100vh;
   transform: translateY(-100%);
-
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
   flex-wrap: nowrap;
 }
 
 .comment-left {
-  width: 60%;
+  width: 70%;
   background-color: #fff;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .comment-right {
-  width: 40%;
+  width: 30%;
 
   height: 100%;
   display: flex;
@@ -323,20 +345,45 @@
 }
 
 .input {
-  width: 290rpx;
+  width: 3000rpx;
   background: rgba(247, 245, 245, 1);
-  border-radius: 100rpx;
-  height: 56rpx;
+  border-radius: 20rpx;
+  height: 80rpx;
   padding-left: 20rpx;
-  padding-right: 20rpx;
+  padding-right: 30rpx;
+  padding-top: 10rpx;
+
 }
 
 .love {
   width: 60rpx;
   height: 60rpx;
+  opacity: 0.7;
 }
 
 .share {
   width: 60rpx;
   height: 60rpx;
+  opacity: 0.7;
+}
+.send{
+  margin-left: 80rpx;
+  font-size: 32rpx;
+  background-color: #08c060;
+  color: #fff;
+}
+.agreenum{
+  opacity: 0.7;
+}
+.emptybox{
+  padding-top: 40px;
+  width: 100vw;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.empty{
+  width: 50vw;
+  height: 40vw;
 }

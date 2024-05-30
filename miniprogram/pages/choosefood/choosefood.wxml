@@ -1,0 +1,72 @@
+<view class="main">
+  <view class="mode">
+   <view bindtap="switch_mode" data-mode='normal' class="{{mode=='normal'?'normal-mode-active':'normal-mode'}}">
+    {{mode=='normal'?'常规模式(已选)':'常规模式'}}
+   </view>
+   <view bindtap="switch_mode" data-mode='love' class="{{mode=='love'?'love-mode-active':'love-mode'}}">    {{mode=='love'?'收藏模式(已选)':'收藏模式'}}
+   </view>
+  </view>
+  <view class="top-select">
+   <view class="price-select">
+  <!--index.wxml-->
+  <!-- <picker mode="selector" range="{{price}}" bindchange="bindpriceSelectorChange">
+    <view class="picker">
+     价格： {{price[priceselectorIndex]}} <text style="font-size: 40rpx;">⏷</text>
+    </view>
+   
+  </picker> -->
+
+
+   </view>
+   <view class="type-select">
+  <!--index.wxml-->
+
+  <!-- <picker mode="selector" range="{{type}}" bindchange="bindtypeSelectorChange">
+    <view class="picker">
+     类型： {{type[typeselectorIndex]}} <text style="font-size: 40rpx;">⏷</text>
+    </view>
+  </picker> -->
+   </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <view class="bg">
+  <image class="bg-pic" src="cloud://tasty-pig-6ga0mjeg8cbc6f94.7461-tasty-pig-6ga0mjeg8cbc6f94-1318720652/index_bg/foodchoose.png"></image></view>
+  <view class="food-text">{{select_foods[foodrandom].food_name}}----{{select_foods[foodrandom].food_price}}元</view>
+  <view  wx:if="{{stop==false&& first==false}}" class="shop-tip">对应店家:</view>
+  <view wx:if="{{stop==false&& first==false}}" class="card">
+        <view class="card-left">
+          <image class="card-img" src="{{select_shops[shoprandom].shop_image}}"></image>
+        </view>
+        <view class="card-right">
+          <view class="hangjz">
+            <text class="card-title">{{select_shops[shoprandom].shop_name}}</text>
+            <text class="card-distance">{{select_shops[shoprandom].shop_distance}}m</text>
+          </view>
+          <view class="card-detail">{{select_shops[shoprandom].shop_introduction}}</view>
+          <text class="card-star">{{select_shops[shoprandom].shop_star}}</text>
+          <text class="card-price">人均消费：{{select_shops[shoprandom].shop_consumption}}/人</text>
+        </view>
+      </view>
+
+  <view class="btn">
+  <button bindtap="random" style="width: 70%;height: 96rpx;" class="next">{{stop==true?'停止':'开始'}}</button>
+  <button bindtap="toshopdetail" style="width: 70%;height: 96rpx;" class="choosethis">吃这个</button>
+</view>
+
+</view>
+
+
+
+

@@ -1,64 +1,37 @@
 <view  class="main">
  <view bindtap="hidecard" class="top">
- <swiper  class="swiper"  >
-  <swiper-item class="swiper-item"><image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image></swiper-item>
-  <swiper-item class="swiper-item"><image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image></swiper-item>
-  <swiper-item class="swiper-item"><image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500"></image></swiper-item>
+ <swiper wx:for="{{shop.shop_images}}" wx:key="index" class="swiper"  >
+  <swiper-item class="swiper-item"><image src="{{item}}"></image></swiper-item>
  </swiper>
 </view>
+<view class="message-part">
 <view class="shop-message">
 <view class="shop-message-left">
-<view class="message-top">
- <text class="shop-name">绵记
+<view bindtap="onShareAppMessage" class="message-top">
+ <text class="shop-name">{{shop.shop_name}}
  </text >
- <image src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-1024.png" class="like"></image>
- <image src="https://cdn3.iconfinder.com/data/icons/arrows-set-12/512/export-1024.png" class="share"></image>
 </view>
-<view class="message-bottom">⭐⭐⭐⭐⭐5.0</view>
+<view class="message-bottom">{{shop.shop_star}}  <text class="card-price">人均消费：15/人</text>  </view>
 </view>
 <view class="shop-message-right">
-<button style="width: 170rpx;" class="record">打卡</button>
+  <image src="{{collect==true?'../../images/liked.png':'../../images/like1.png'}}" bindtap="like" class="like"></image>
+ 
+ <button style="width: 50rpx; height: 50rpx;" class="share-btn"  open-type="share" >
+<image  src="https://cdn3.iconfinder.com/data/icons/arrows-set-12/512/export-1024.png" class="share"> </image></button>
 </view>
  
 </view>
 <view class="shop-introduction">
  店铺详情
 </view>
-<view class="shop-detail">Ojingeo muchim is a spicy, sweet and tangy dish that’s made with boiled squid and fresh vegetables. The perfect blend of spicy, sweet, and sour tastes in this dish will surely increase your appetite.</view>
-
+<view class="shop-detail">{{shop.shop_introduction}}</view>
+</view>
+<view class="btn-box">
 <view class="send">
-    <button style="width: 70%;" class="btn">点餐</button>
+    <!-- <button style="width: 70%;" bindtap="order" class="btn" data-url=''>点餐跳转</button> -->
  </view>
-   <view class="send">
-    <button style="width: 70%;" class="btn">导航去</button>
-   </view>
-   <view bindtap="showcard" class="dgutcomment {{show==true?'dgutcomment-active':'dgutcomment'}}">
- <view class="line"></view>
- <view class="title">莞工评价<text class="text" >有1000个校友参与了评论</text></view>
- <view class="poster-message">
-        <view class="poster">
-            <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="poster-avatar"></image>
-            <text class="poster-name">莞工小可爱</text>
-        </view>
-        <view class="post-date">2分钟前</view>
-    </view>
-    <view class="pic-show">
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-    </view>
-    <view class="post-label">#小狗#宠物#可爱</view>
-    <view class="post-text">
-        西伯利亚雪橇犬(俄语：Сибирский хаски，英语：Siberian Husky)是原产于西伯利亚的雪橇犬犬种，也叫哈士奇、二哈。该犬脚步轻快，动作...
-    </view>
-
+   <!-- <view class="send">
+    <button bindtap="go" style="width: 70%;" class="btn">导航去</button>
+   </view> -->
+  </view>
 </view>
-</view>
-
-

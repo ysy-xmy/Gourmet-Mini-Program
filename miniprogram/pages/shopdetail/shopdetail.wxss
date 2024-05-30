@@ -12,84 +12,89 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: auto;
+  height: 500rpx;
+  background-color: #fff;
+  align-items: center;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  padding-top:24rpx;
+  padding-bottom: 24rpx;
 }
 .swiper{
-  margin-top: 60rpx;
-  width: 600rpx;
-  height: 450rpx;
+  width: 100%;
+  height:100%;
 }
 .swiper-item>image{
-  width: 600rpx;
-  height: 450rpx;
+  width: 100%;
+  height: 100%;
 }
 .swiper-item{
-  border-radius: 25px;
-
+  border-radius: 5px;
 }
 .shop-message{
-  width: 100vw;
+  width: 95vw;
   height: 100rpx;
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
-  
+  margin-top: 30rpx;
 }
 .shop-name{
-  font-size: 50rpx;
+  font-size: 40rpx;
   font-weight: bold;
   line-height: 50rpx;
+  height: 50rpx;
+  width: 100%;
 }
 .message-top{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  margin-left: 60rpx;
+  flex-wrap: wrap;
+  margin-left: 30rpx;
+  width: 100%;
 }
 .message-bottom{
-  margin-left: 60rpx;
+  margin-left: 40rpx;
   font-size: 20rpx;
 }
 .shop-message-left{
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
 .shop-message-right{
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
 }
 .like{
-  width: 50rpx;
-  height: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 10rpx;
 }
 .share{
-  width: 50rpx;
-  height: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  position:absolute;
 }
-.record{
-  line-height: 100%;
-width: 100rpx;
-height: 36.26px;
-border-radius: 24.5px;
-background: linear-gradient(138.54deg, rgba(255, 204, 51, 1) 0%, rgba(255, 157, 23, 1) 100%);
-box-shadow: 0px 2px 13px 0px rgba(255, 172, 32, 0.5);
-font-size: 30rpx;
-font-weight: bold;
-color: rgba(255, 255, 255, 1);
-text-align: center;
+.share-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .shop-introduction{
   font-size: 32rpx;
   font-weight: normal;
   color: rgba(48, 56, 67, 1);
   width: 100%;
-  margin-left: 60rpx;
-  margin-top: 15rpx;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 .shop-detail{
   width: 85%;
@@ -98,6 +103,32 @@ text-align: center;
   line-height: 32rpx;
   color: rgba(153, 153, 153, 1);
   text-align: justify;
+  padding-left: 40rpx;
+  /* background-color: #fff;
+  border-radius: 20rpx;
+  padding: 10px; */
+}
+.message-part{
+  width: 95vw;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 10px;
+  padding-left: 2px;
+  padding-bottom: 20px;
+  height: 350rpx;
+}
+.btn-box{
+  width: 98vw;
+  height:150px;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .send{
   width: 100%;
@@ -106,17 +137,17 @@ text-align: center;
 }
 .btn{
   border-radius: 24.5px;
-  background: linear-gradient(138.54deg, rgba(255, 204, 51, 1) 0%, rgba(255, 157, 23, 1) 100%);
-  box-shadow: 0px 2px 13px 0px rgba(255, 172, 32, 0.5);
+  background: #4169e1;
   color: #fff;
   font-size: 30rpx;
 }
 .dgutcomment{
   width: 100%;
   height: auto;
+  min-height: 85%;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background: rgba(211, 240, 245, 1);
+  background: rgb(197, 212, 214);
   box-shadow: 0px 2px 171px 0px rgba(19, 18, 18, 0.33);
   display: flex;
   justify-content: center;
@@ -132,7 +163,7 @@ text-align: center;
   height: auto;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background: rgba(211, 240, 245, 1);
+  background: ⭐⭐⭐⭐4.0;
   box-shadow: 0px 2px 171px 0px rgba(19, 18, 18, 0.33);
   display: flex;
   justify-content: center;
@@ -178,7 +209,6 @@ text-align: center;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  
 }
 .poster{
   display: flex;
@@ -197,7 +227,9 @@ text-align: center;
  padding-left: 20rpx;
  font-size: 32rpx;
 font-weight: normal;
-color: rgba(0, 0, 0, 1);
+color: #476484;
+font-size: 30rpx;
+font-weight: bold;
 }
 .post-date{
   padding-top: 50rpx;
@@ -209,12 +241,11 @@ color: rgba(0, 0, 0, 1);
 }
 .pic-show{
   width: 95%;
-  height: 670rpx;
- 
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
+  margin-top: 30rpx;
 }
 .pic-item{
   width: 200rpx;
@@ -222,7 +253,6 @@ color: rgba(0, 0, 0, 1);
   border-radius: 10rpx;
   height: 200rpx;
   margin-right: 25rpx;
-  
 }
 .post-label{
   width: 95%;
@@ -236,5 +266,24 @@ color: rgba(0, 0, 0, 1);
   margin-top: 20rpx;
   justify-self: flex-start;
   font-size: 28rpx;
-color: rgba(102, 102, 102, 1);
+color: rgb(0, 0, 0);
+}
+.comment_star{
+  width: 90%;
+  text-align: left;
+
+}
+.card-price{
+  margin-left: 10px;
+  font-size: 20rpx;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height:  20rpx;
+  color: rgba(1, 15, 7, 1);
+  text-align: left;
+}
+.line{
+  width: 90%;
+  height: 0.3px;
+  background-color: rgb(173, 173, 173);
 }

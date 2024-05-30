@@ -1,0 +1,199 @@
+.main{
+  width: 100%;
+  padding-bottom: 150px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.bg{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-pic{
+  width: 75vw;
+  height: 75vw;
+}
+.food-text{
+  width: 100%;
+  font-size: 50rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+.choosethis{
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  border-radius: 8px;
+  background: #4169e1;
+  color: #fff;
+  font-size: 40rpx;
+}
+.next{
+  margin-top: 30rpx;
+  border-radius: 8px;
+  background: #4169e1;
+  color: #fff;
+  font-size: 40rpx;
+}
+.btn{
+  margin-top: 40rpx;
+  width: 100%;
+}
+.card{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 15px;
+}
+.card-left{
+  flex:3
+}
+.card-right{
+  flex:7
+}
+.hangjz{
+  display: flex;
+  justify-content: space-between;
+}
+.card-title{
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 1);
+}
+.card-distance{
+width: 50%;
+height: 26px;
+line-height: 26px;
+font-size: 14px;
+font-weight: 400;
+letter-spacing: 0.6px;
+color: #848b87;
+text-align: right;
+}
+.card-detail{
+margin-left: 15px;
+font-size: 16px;
+font-weight: 400;
+letter-spacing: -0.4px;
+width: 204px;
+height: 45px;
+opacity: 0.64;
+overflow: hidden;
+color: rgba(1, 15, 7, 1);
+}
+.card-img{
+  border-radius: 8px;
+  width: 100px;
+  height: 90px;
+}
+.card-star{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 0px;
+  color: rgba(1, 15, 7, 1);
+  text-align: left;
+  margin-left: 15px;
+  opacity: 0.74;
+}
+.card-price{
+margin-left: 10px;
+font-size: 14px;
+font-weight: 400;
+letter-spacing: -0.25px;
+line-height: 0px;
+color: rgba(1, 15, 7, 1);
+text-align: left;
+}
+.shop-tip{
+  text-align: left;
+  width: 100%;
+  padding-left: 50rpx;
+}
+/* 这里写上部的筛选样式 */
+.mode{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid rgba(59, 130, 246, 1);
+  border-radius: 5px; */
+  height: 72rpx;
+  margin-top: 30rpx;
+}
+.normal-mode{
+  width: 42%;
+  text-align: center;
+  background: rgba(243, 244, 246, 1);
+  color:rgba(75, 85, 99, 1);
+  height: 72rpx;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  margin-right: 1%;
+  border-radius: 4px;
+}
+.normal-mode-active{
+  width: 42%;
+  text-align: center;
+  background-color:rgba(59, 130, 246, 1);
+  color: #fff;
+  height: 72rpx;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  margin-right: 1%;
+  border-radius: 4px;
+}
+.love-mode{
+  width: 42%;
+  text-align: center;
+  background: rgba(243, 244, 246, 1);
+  color:rgba(75, 85, 99, 1);
+  height: 72rpx;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  margin-left: 1%;
+  border-radius: 4px;
+}
+.love-mode-active{
+  width: 42%;
+  text-align: center;
+  background-color:rgba(59, 130, 246, 1);
+  color: #fff;
+  height: 72rpx;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  margin-left: 1%;
+  border-radius: 4px;
+}
+/* index.wxss */
+.top-select{
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+picker{
+   width: 50vw;
+   display: flex;
+   flex-wrap: nowrap;
+}
+.picker {
+  font-size: 16px;
+  color: rgba(17, 24, 39, 1);
+  padding: 15px 20px;
+  width: 300rpx;
+  text-align: center;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ccc;
+  margin-left: 10px;
+}

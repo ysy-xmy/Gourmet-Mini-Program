@@ -65,60 +65,26 @@ Page({
     userinfo:{},
     user_signature:"",
       list: [{
-        name: '苏苏',
+        name: '小木鱼',
         num: '1',
         title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: 'https://img0.baidu.com/it/u=1737323254,4261163827&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500',
+        url: '',
         avatar: 'https://img0.baidu.com/it/u=794322571,4010439746&fm=253&fmt=auto&app=138&f=JPEG?w=513&h=500'
       },
-      {
-        name: '苏苏2',
-        num: '1',
-        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: 'https://img.syfabiao.com/zb_users/upload/2021/11/20211126212713163793323346099.jpg',
-        avatar: 'https://img0.baidu.com/it/u=794322571,4010439746&fm=253&fmt=auto&app=138&f=JPEG?w=513&h=500'
-      },
-      {
-        name: '苏苏3',
-        num: '1',
-        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: 'https://pic.616pic.com/photoone/00/02/71/618cf5f6aaf0c1249.jpg',
-        avatar: 'https://img0.baidu.com/it/u=794322571,4010439746&fm=253&fmt=auto&app=138&f=JPEG?w=513&h=500'
-      },
-      {
-        name: '苏苏4',
-        num: '1',
-        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: 'https://pic.616pic.com/photoone/00/00/15/618ce62dde8234327.jpg',
-        avatar: 'https://img0.baidu.com/it/u=794322571,4010439746&fm=253&fmt=auto&app=138&f=JPEG?w=513&h=500'
-      },
-      {
-        name: '苏苏5',
-        num: '1',
-        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: 'https://pic.616pic.com/ys_bnew_img/00/18/23/uckGozn4s8.jpg',
-        avatar: 'https://img0.baidu.com/it/u=794322571,4010439746&fm=253&fmt=auto&app=138&f=JPEG?w=513&h=500'
-      },
-      {
-        name: '苏苏6',
-        num: '1',
-        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: 'https://img2.baidu.com/it/u=1960000388,340159438&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
-        avatar: 'https://img0.baidu.com/it/u=794322571,4010439746&fm=253&fmt=auto&app=138&f=JPEG?w=513&h=500'
-      },
-      {
-        name: '苏苏7',
-        num: '1',
-        title: '测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测测试数据测试测试测试测',
-        url: 'https://img2.baidu.com/it/u=1960000388,340159438&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
-        avatar: 'https://img0.baidu.com/it/u=794322571,4010439746&fm=253&fmt=auto&app=138&f=JPEG?w=513&h=500'
-      },
-      ]
+      
+      ],
+      selected_card:'',
+      all_card:'',
+      page:20,
+      nonewdata:false
   },
 
- enterpostdetail(){
+ enterpostdetail(e){
+   
+   let index=e.currentTarget.dataset.index
+   console.log(this.data.all_card[index])
   wx.navigateTo({
-    url: '../postdetail/postdetail',
+    url: '../postdetail/postdetail?cardid='+this.data.all_card[index]._id,
     
   })
  },
@@ -189,6 +155,9 @@ Page({
  },
   onLoad: function (options) {
     const that =this
+    that.setData({
+      list:[]
+    })
     wx.cloud.init()
     wx.cloud.callFunction({
     name:'helloworld',
@@ -196,56 +165,92 @@ Page({
       message:'helloCloud',
     }
   }).then(res=>{
+    console.log(res.result.userInfo.openId)
     appdata.globalData.openid=res.result.userInfo.openId
+    
+    db.collection('user').where({
+      _openid: res.result.userInfo.openId
+    }).get({
+      success: function (res) {
+        if(res.data.length>0){
+        appdata.globalData.hasuserinfo=true//标明已获取到用户信息
+        let userinfo=that.data.userinfo
+        userinfo.nickName=res.data[0].user_name
+        userinfo.avatarUrl=res.data[0].user_avatar
+        userinfo.user_signature=res.data[0].user_signature
+        appdata.globalData.userinfo=userinfo//全局拿到用户信息
+        that.getData()
+       
+      }
+      else{
+        
+        that.getData()
+      }
+    
+    }
+    })
   })
    
-  db.collection('user').where({
-    _openid: appdata.globalData.openid
-  }).get({
-    success: function (res) {
-      if(res.data.length>0){
-      appdata.globalData.hasuserinfo=true//标明已获取到用户信息
-      let userinfo=that.data.userinfo
-      userinfo.nickName=res.data[0].user_name
-      userinfo.avatarUrl=res.data[0].user_avatar
-      userinfo.user_signature=res.data[0].user_signature
-      appdata.globalData.userinfo=userinfo//全局拿到用户信息
-    }}
   
-  })
-
-
-
-
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    
-  },
 
+  onReady: function () {
+   this.getData()
+  } ,
+  getData(){
+    const that = this
+    db.collection('post').get({
+      success:function(rees){
+        let list = that.data.list
+        console.log(rees.data)
+        that.setData({
+          all_card:rees.data
+        })
+        for(var i=rees.data.length-1;i>=0;i--){
+          let post={}
+          console.log(i)
+          post.num=rees.data[i].agreenum
+          post.title=rees.data[i].post_text
+          post.url=rees.data[i].post_images[0]
+          post.index=i
+          db.collection('user').where({
+            _openid: rees.data[i]._openid,
+          }).get({
+            success:function(res){
+              post.avatar=res.data[0].user_avatar
+              post.name=res.data[0].user_name
+              list.push(post)
+            
+              if(list.length==rees.data.length){
+                that.setData({
+                  list:list
+                })
+              }
+            }
+          })
+        }
+      }
+    })
+  },
+  
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
     if(appdata.globalData.hasuserinfo==true){
-      console.log(appdata.globalData.hasuserinfo)
       this.setData({
         hasuserinfo:appdata.globalData.hasuserinfo,
         userinfo:appdata.globalData.userinfo,
        })
-
-
     }
-
-
-
     if (typeof this.getTabBar === 'function' &&
     this.getTabBar()) {
     this.getTabBar().setData({
-      selected: 1
+      selected: 2
     })
   }
   },
@@ -268,20 +273,75 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    this.setData({
+      list:[],
+      page:20
+    })
+    this.getData()
   },
-
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+   
+  console.log("触底了")
+  const that =this
+  
     
+  var page=that.data.page
+  console.log(page)
+    db.collection('post').skip(page).get({
+      success:function(rees){
+        
+         page=page+rees.data.length
+        console.log(page)
+        var list = []
+        console.log(rees.data.length)
+        let ollallcard=that.data.all_card
+        let newallcard=ollallcard.concat(rees.data)
+        console.log(newallcard)
+        that.setData({
+          all_card:newallcard,
+          nonewdata:true,
+          page:page
+        })
+        for(var i=rees.data.length-1;i>=0;i--){
+          let post={}
+          post.num=rees.data[i].agreenum
+          post.title=rees.data[i].post_text
+          post.url=rees.data[i].post_images[0]
+          post.index=i+page-rees.data.length
+          db.collection('user').where({
+            _openid: rees.data[i]._openid,
+          }).get({
+            success:function(res){
+             
+              post.avatar=res.data[0].user_avatar
+              post.name=res.data[0].user_name
+            
+              list.push(post)
+              if(list.length==rees.data.length){
+                console.log(list)
+                console.log(that.data.list)
+                var olddata=that.data.list
+                var newdata=olddata.concat(list)
+                console.log(newdata)
+                that.setData({
+                  list:newdata,
+                })
+                console.log(that.data.list)
+              }
+            }
+          })
+        }
+      }
+    })
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
   }
 })

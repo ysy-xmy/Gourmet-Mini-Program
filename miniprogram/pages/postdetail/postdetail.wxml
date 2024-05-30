@@ -1,27 +1,28 @@
-<view class="main">
-    <view class="poster-message">
+<view bindtap="{{comment||reply?'exitcomment':''}}" class="main">
+ <view class="post-top">
+    <view  class="poster-message">
         <view class="poster">
-            <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="poster-avatar"></image>
-            <text class="poster-name">莞工小可爱</text>
+            <image src="{{userinfo.avatarUrl}}" class="poster-avatar"></image>
+            <text class="poster-name">{{userinfo.nickName}}</text>
         </view>
-        <view class="post-date">2分钟前</view>
+        <view class="post-date">{{post_date}}</view>
     </view>
-    <view class="pic-show">
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
-        <image src="https://img2.baidu.com/it/u=3202947311,1179654885&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" class="pic-item"></image>
+<swiper indicator-dots class="pic-show">
+  <swiper-item class="pic-item" wx:key="{{index}}" wx:for="{{imgs}}" data-index="{{index}}" >
+    <image bindtap="previewImage" mode="aspectFill"    src="{{item}}" class="pic-item-photo"></image>
+
+  </swiper-item>
+
+
+</swiper>
+
+
+
+    <!-- <view  wx:for="{{post_tags}}" class="post-label">#{{item}}</view> -->
+    <view  class="post-text">
+        {{post_text}}
     </view>
-    <view class="post-label">#小狗#宠物#可爱</view>
-    <view class="post-text">
-        西伯利亚雪橇犬(俄语：Сибирский хаски，英语：Siberian Husky)是原产于西伯利亚的雪橇犬犬种，也叫哈士奇、二哈。该犬脚步轻快，动作...
-    </view>
-    <view class="post-card">
+    <view  style="display: none;" class="post-card">
         <view class="post-card-left">
             <image src="https://img0.baidu.com/it/u=1043211323,3698222267&fm=253&fmt=auto&app=138&f=PNG?w=808&h=500" class="post-card-pic"></image>
         </view>
@@ -37,62 +38,63 @@
             </view>
         </view>
     </view>
-    <view class="line"></view>
-    <view class="show-comment">
-        <view class="comment-total">共100条评论</view>
-        <view class="comment-item">
-            <view class="comment-item-left">
-                <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="comment-item-avatar"></image>
+  </view>
+    <view  class="show-comment">
+        <view class="comment-total">共{{comments.length}}条评论</view>
+        <view class="line"></view>
+        <block wx:for="{{comments}}" wx:for-index="idx" wx:for-item="it"  wx:key="{{idx}}" >
+        <view class="comment-item" >
+            <view data-index="{{idx}}" bindtap="reply"  class="comment-item-left">
+                <image src="{{it.commenter_avatar}}" class="comment-item-avatar"></image>
                 <view class="comment-item-main">
-                    <view class="comment-item-name">小木🐟</view>
-                    <view class="comment-item-text">嘎嘎嘎嘎嘎</view>
-                    <view class="comment-item-date">03-22 20:22</view>
+                    <view class="comment-item-name">{{it.commenter_name}}</view>
+                    <view class="comment-item-text">{{it.comment_text}}</view>
+                    <view class="comment-item-date">{{it.comment_date}}</view>
                 </view>
             </view>
-            <view class="comment-item-right">
-                <image bindtap="agree" src="https://cdn2.iconfinder.com/data/icons/help-and-support-35/32/like_thumb_up_gestures_agree_thumbs_up-1024.png" class="agree"></image>
-                <view class="agree-num">{{agreenum}}</view>
+            <view  class="comment-item-right">
+              <view class="agree-num">{{it.commenter_agreenum}}</view>
+                <image bindtap="agreecomment"  src="{{it.hadagreecomment==true?'../../images/hadagree.png':'../../images/agree.png'}}" class="agree" data-index="{{idx}}"></image>
                 <!-- <button class="reply-btn">回复</button> -->
             </view>
-            <view class="comment-item-bottom">
-                <text style="display: none;" class="display-tip">展开2条回复</text>
+            <view  class="comment-item-bottom">
+              <text wx:if="{{it.showreply==false&&it.reply.length>0}}" data-index="{{idx}}" bindtap="showreply"  class="display-tip">展开{{it.reply.length}}条回复∨</text>
+              <block wx:if="{{it.showreply==true}}" wx:for="{{it.reply}}" wx:for-index="idxs" wx:for-item="its" wx:key="idxs" >
                 <view class="comment-item-left">
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="comment-item-avatar"></image>
+                    <image class="comment-item-avatar" src="{{its.replyer_avatar}}"></image>
                     <view class="comment-item-main">
-                        <view class="comment-item-name">小木🐟</view>
-                        <view class="comment-item-text">嘎嘎嘎嘎嘎</view>
-                        <view class="comment-item-date">03-22 20:22</view>
+                        <view class="comment-item-name">{{its.replyer_name}}</view>
+                        <view class="comment-item-text">{{its.reply_text}}</view>
+                        <view class="comment-item-date">{{its.reply_date}}</view>
                     </view>
                 </view>
                 <view class="comment-item-right">
-                    <image bindtap="agree" src="https://cdn2.iconfinder.com/data/icons/help-and-support-35/32/like_thumb_up_gestures_agree_thumbs_up-1024.png" class="agree"></image>
-                    <view class="agree-num">{{agreenum}}</view>
+                  <view class="agree-num">{{its.reply_agreenum}}</view>
+                    <image data-idxs="{{idxs}}" data-idx="{{idx}}"  bindtap="agreereply" src="{{its.agreereply==true?'../../images/hadagree.png':'../../images/agree.png'}}" class="agree"></image>
                 </view>
-                <view class="comment-item-left">
-                    <image src="http://pic.imeitou.com/uploads/allimg/210526/3-210526154T3-52.jpg" class="comment-item-avatar"></image>
-                    <view class="comment-item-main">
-                        <view class="comment-item-name">小木🐟</view>
-                        <view class="comment-item-text">嘎嘎嘎嘎嘎</view>
-                        <view class="comment-item-date">03-22 20:22</view>
-                    </view>
-                </view>
-                <view class="comment-item-right">
-                    <image bindtap="agree" src="https://cdn2.iconfinder.com/data/icons/help-and-support-35/32/like_thumb_up_gestures_agree_thumbs_up-1024.png" class="agree"></image>
-                    <view class="agree-num">{{agreenum}}</view>
-                </view>
-                <text style="" class="display-tip">收起2条回复</text>
+              </block>
+                <text  bindtap="showreply" wx:if="{{it.showreply==true}}" data-index="{{idx}}" class="display-tip">收起{{it.reply.length}}条回复∧</text>
+         
             </view>
         </view>
+      </block>
+      <view wx:if="{{comments.length==0}}" class="emptybox">
+      <image src="../../images/empty.png" class="empty"></image>
+      <view style="opacity: 0.5;font-size: 30rpx;">还没有人发表评论，快来抢沙发!!!</view>
     </view>
-    <view class="comment">
-        <view class="comment-left">
-            <input bindtap="comment" placeholder="我也来说两句" class="input" />
-        </view>
-        <view class="comment-right">
-            <image src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-1024.png" class="love"></image>
-            <text>100</text>
-            <image src="https://cdn3.iconfinder.com/data/icons/arrows-set-12/512/export-1024.png" class="share"></image>
-            <text>100</text>
-        </view>
     </view>
+
 </view>
+<view class="comment">
+        <view class="comment-left">
+            <textarea fixed="true" cursor-spacing="100" show-confirm-bar=""  focus="{{comment||reply}}" data-text="{{comment_text}}"  bindtap="{{reply==false?'comment':''}}"  placeholder="{{reply==true?'回复@'+huifu:'我也来说两句'}}" class="input" value="{{comment_text}}" bindinput="bind_put" ></textarea>
+        </view>
+        <view  class="comment-right">
+            <image bindtap="like" wx:if="{{comment==false&&reply==false}}" src="{{agreepost?'../../images/liked.png':'../../images/like1.png'}}" class="love"></image>
+            <text class="agreenum" wx:if="{{comment==false&&reply==false}}">{{agreenum}}</text>
+            <image wx:if="{{comment==false&&reply==false}}" src="../../images/share.png" class="share"></image>
+            <!-- <text class="agreenum" wx:if="{{comment==false&&reply==false}}">100</text> -->
+            <button style="width: 170rpx;"  wx:if="{{comment==true||reply==true}}" bindtap="send" data-idxs="{{idxs}}" data-idx="{{idx}}" src="../../images/send.png" class="send">{{comment==true?'评论':'回复'}}</button>
+
+        </view>
+    </view>

@@ -26,7 +26,7 @@ page {
 .heart {
   width: 30rpx;
   height: 26rpx;
-  margin-right: 8rpx;
+  margin-right: 20rpx;
 }
 
 .heart {
@@ -101,4 +101,13 @@ page {
   top: 80%;
   left: 100%;
   transform: translateX(-110%);
+}
+.love{
+  width: 20px;
+  height: 20px;
+}
+.nonewdatatip{
+  font-size: 25rpx;
+  text-align: center;
+  color: #505050;
 }

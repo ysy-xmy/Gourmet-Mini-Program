@@ -1,5 +1,6 @@
 .main{
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   background-color: #fff;
@@ -8,16 +9,15 @@
   margin-bottom: 100rpx;
 }
 .card{
-  width: 90%;
-  height: 350rpx;
+  width:700rpx;
   margin-top: 40rpx;
   border-radius: 10px 10px, 0px, 0px;
-background: rgba(245, 245, 245, 1);
+background: rgb(255, 255, 255);
 }
 .pic-add{
-  width: 150rpx;
-  height: 150rpx;
-  background: rgba(204, 204, 204, 1);  border-radius: 10rpx;
+  width: 250rpx;
+  height: 250rpx;
+  background: rgb(255, 255, 255);  border-radius: 10rpx;
   margin-left: 10rpx;
   display: flex;
   justify-content: center;
@@ -26,23 +26,29 @@ background: rgba(245, 245, 245, 1);
 .text-edit{
   padding-left: 10rpx;
   padding-top: 20rpx;
+  padding-right: 30rpx;
+  margin-bottom: 20rpx;
   width: 100%;
-  height: 120rpx;
-  font-size: 40rpx;
+  height: 240rpx;
+  font-size: 35rpx;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  
 }
 .add{
-  width: 60rpx;
-  height: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 .add-label{
-
   width: 120rpx;
   padding-left: 10rpx;
   font-size: 30rpx;
   font-weight: normal;
   color: rgba(204, 51, 16, 1);
   margin-top: 20rpx;
-  background: rgba(204, 204, 204, 1);
+  background: rgb(255, 255, 255);
   height: 64rpx;
   border-radius: 50px;
   line-height: 64rpx;
@@ -65,7 +71,7 @@ background: rgba(245, 245, 245, 1);
   margin-bottom: 50rpx;
 }
 .post-card{
-  width: 88%;
+  width: 95%;
   height: 216rpx;
   margin-top: 10rpx;
   margin-bottom: 10rpx;
@@ -79,10 +85,10 @@ background: rgba(245, 245, 245, 1);
   box-shadow: 5px 6px 18px 0px rgba(0, 0, 0, 0.08);
 }
 .post-card-pic{
-width: 92px;
-height: 92px;
-border-radius: 16px;
-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.08);
+  width: 92px;
+  height: 92px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.08);
 }
 .post-card-left{
  flex: 3;
@@ -136,7 +142,7 @@ line-height: 63rpx;
    margin-left: 10rpx;
     font-size: 28rpx;
     font-weight: normal;
-    color: rgba(176, 179, 199, 1);
+    color: rgb(255, 255, 255);
 }
 .card-distance{
   height: 62rpx;
@@ -163,3 +169,77 @@ box-shadow: 0px 2px 13px 0px rgba(255, 172, 32, 0.5);
 color: #fff;
 font-size: 40rpx;
   }
+
+
+.imgbox{
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.imgbox-item{
+  width:30%;
+  height: 220rpx;
+  
+}
+ .img-wrap {
+  font-size: 30rpx;
+  color: #33373E;
+  margin-bottom: 10rpx;
+  width: 700rpx;
+}
+.sign {
+  width: 40px;
+  height: 60px;
+  font-size: 90rpx;
+}
+.img-wrap .imglist {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.img-wrap .imglist .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 22rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.img-wrap .imglist .last-item {
+  background-color: #f7f7f7;
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 146rpx;
+  border: 2rpx dashed #8B97A9;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .img-wrap .imglist .item image {
+  width: 100%;
+  height: 100%;
+}
+.img-wrap .imglist .item .delete {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: -14rpx;
+  right: -12rpx;
+  
+}
+.sign-img{
+  width: 70px;
+  height: 70px;
+}
+
+
+

@@ -1,71 +1,85 @@
 .main{
   width: 100vw;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .body-top{
   width: 100vw;
-  height: 350rpx;
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position:relative;
+  margin-bottom: 40rpx;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .body-bottom{
   width: 100vw;
-  height: 500rpx;
-  
+  margin-bottom: 100rpx;
 }
 .bg{
   position: absolute;
   float: top;
   width:100vw ;
-  height: 350rpx;
-  opacity: 0.8;
+  height: 200rpx;
+  opacity: 0.7;
   z-index: 3;
-  background-color: rgb(138, 138, 138);
+  top:0;
+  background-color: rgb(0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-bottom{
+  position: absolute;
+  top: 170rpx;
+  width: 100vw;
+  height: 200rpx;
+  background-color: #fff;
 }
 .user-card{
+  position:relative;
   width: 100%;
-  height: 300rpx;
+  height: 220rpx;
   display: flex;
   z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: 120rpx;
 }
 .card{
-width: 500rpx;
-height: 190rpx;
-border-radius: 20rpx;
-background: rgba(255, 255, 255, 1);
-box-shadow: 2px 11px 32px 0px rgba(0, 0, 0, 0.3);
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-align-content: space-around;
+  width: 500rpx;
+  height: 190rpx;
+  border-radius: 20rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 2px 11px 32px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 .card-title{
   width: 100%;
   text-align: center;
- font-size: 40rpx;
- font-weight: bold;
+  font-size: 40rpx;
+  font-weight: bold;
 }
 .card-text{
-width: 170px;
-height: 29px;
-font-size: 10px;
-font-weight: normal;
-line-height: 14.4px;
-color: rgba(153, 153, 153, 1);
-text-align: left;
-vertical-align: top;
-
+  width: 170px;
+  height: 29px;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 14.4px;
+  color: rgba(153, 153, 153, 1);
+  text-align: left;
+  vertical-align: top;
 }
 .user-card-left{
-  flex: 3;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,44 +88,59 @@ vertical-align: top;
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
+  border: #fff 7rpx solid;
 }
 .user-card-right{
-  flex:7;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  justify-content: center;
 }
 .user-card-name{
-  width: 100%;
   font-weight: bold;
   font-size: 32rpx;
-  color:#fdfbf5;
+  color:#000000;
 }
 .user-card-detail{
   width: 100%;
   font-size: 18rpx;
   font-weight: normal;
+  line-height: 18rpx;
   opacity: 0.8;
   margin-top: 10px;
   color:#fdfbf5
 }
 .tabbar{
   width: 100%;
-  margin-top: 20rpx;
+  background-color: #fff;
+  height: 84rpx;
 }
 .tabbar-item{
-  width: 25%;
+  width: 50%;
   display: inline-block;
   text-align: center;
-  font-weight: bold;
-  
+  font-weight: normal;
+  line-height: 84rpx;
+  height: 84rpx;
+  color: rgba(48, 48, 48, 1);
+}
+.tabbar-item-active{
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  line-height: 84rpx;
+  height: 84rpx;
+  color: rgba(59, 130, 246, 1);
+  border-bottom: #3b82f6 solid 2px;
 }
 .active{
   text-decoration: underline black 2px;
 }
 .tiezi-avatar{
-  width: 90rpx;
-  height: 90rpx;
+  width: 100rpx;
+  height: 100rpx;
   border-top-left-radius: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 3px;
@@ -134,18 +163,22 @@ vertical-align: top;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40rpx;
+  margin-top: 5rpx;
   flex-wrap: wrap;
-  
+  padding-bottom: 100px;
+  padding-top: 20rpx;
 }
 .tiezi-text{
   width: 80%;
-  height: 100%;
+  height: 100rpx;
   font-size: 38rpx;
+  line-height: 100rpx;
+  overflow: hidden;
 }
 .tiezi-time{
-  width: 20%;
-
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
   font-size: 22rpx;
   align-items: flex-end;
   display: flex;
@@ -157,8 +190,153 @@ vertical-align: top;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 .nologin-text{
   font-size: 40rpx;
 
 }
+.change-name{
+  margin-left: 5px;
+  width: 35rpx;
+  height: 35rpx;
+}
+.change-bg{
+  position: absolute;
+  top: 120rpx;
+  left: 98%;
+  transform: translateX(-100%);
+  color: #ffffff;
+  font-size: 28rpx;
+  z-index: 10;
+  width: 112px;
+  height: 56px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 14px 4px 14px;
+}
+.input-field {
+  padding: 0.5em 0.75em;
+  border-radius: 0.2em;
+  border: 1px solid var(--c-border, currentColor);
+  color: var(--c-text);
+  font-size: 1rem;
+  letter-spacing: 0.1ch;
+}
+.nologinimg{
+  width:400rpx;
+  height: 350rpx;
+}
+.nologintip{
+  width: 100%;
+  text-align: center;
+}
+.collect{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rpx;
+  flex-wrap: wrap;
+  padding-top: 15rpx;
+}
+.context{
+  width: 100vw;
+  height: auto;
+  background-color: #fff;
+}
+.alert-message{
+  width: 90%;
+  height: 74rpx;
+  border: 1px solid rgba(191, 219, 254, 1);
+  background: rgba(237, 245, 255, 1);
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.alert-left{
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  flex:1;
+}
+.alert-right{
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+}
+.alert-cancel{
+  width: 35rpx;
+  height: 35rpx;
+
+}
+.alert-logo{
+  width: 40rpx;
+  height: 40rpx;
+
+}
+.alert-message-text{
+  height:74rpx ;
+  line-height: 74rpx;
+  font-size: 30rpx;
+  font-weight: normal;
+  color: #3b82f6;
+  margin-left: 10rpx;
+  flex:8;
+  
+}
+.alert-box{
+  margin-top: 10rpx;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  margin-bottom: 10rpx;
+}
+/* 以下是个人信心栏的样式 */
+.message-bar{
+  margin-top: 18rpx;
+  width: 100vw;
+  height: 76px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 28px 16px 28px;
+  margin-bottom: 0rpx;
+}
+.message-bar-item{
+  width: 200rpx;
+  height: 100rpx;
+
+}
+.message-bar-item-number{
+  font-size: 50rpx;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 28px;
+  color: rgba(59, 130, 246, 1);
+  text-align: center;
+}
+.message-bar-item-text{
+  margin-top: 20rpx;
+font-size: 25rpx;
+font-weight: 400;
+letter-spacing: 0.6px;
+line-height: 16px;
+color: rgba(0, 0, 0, 1);
+text-align: center;
+}
+

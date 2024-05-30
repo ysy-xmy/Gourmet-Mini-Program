@@ -9,9 +9,10 @@
       <template is="item" data="{{...item}}" wx:if="{{index%2==1}}"></template>
     </block>
   </view>
+  <view class="nonewdatatip" wx:if="{{nonewdata==true}}" >没有更多了~</view>
 </view>
 <template name="item">
-  <view class="item" bindtap="enterpostdetail">
+  <view class="item" bindtap="enterpostdetail" data-index="{{index}}">
     <image class="item-img" src="{{url}}" mode="widthFix"></image>
     <view class="item-title-box">
       <navigator url="url" class="item-title">{{title}}</navigator>
@@ -20,10 +21,12 @@
       <image class="item-ava" src="{{avatar}}"></image>
       <text class="name-title">{{name}}</text>
       <view class="heart">
-        <text>{{num}}</text>
+      <image src="../../images/like2.png" class="love"></image>
+        <text style="padding-right: 20rpx;">{{num}}</text>
       </view>
     </view>
   </view>
-  
+
 </template>
+
 <image bindtap="add" class="add" src="../../images/add.png"></image>
